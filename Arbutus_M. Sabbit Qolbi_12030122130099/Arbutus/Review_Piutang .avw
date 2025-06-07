@@ -1,0 +1,11 @@
+[SKIP] 0
+[TLINES] 2
+[RLINES] 1
+[LINE] 1
+CustomerNo             WIDTH 11
+Count                 
+COUNT_PERCENTAGE      
+FIELD_PERCENTAGE      
+Amount                
+Credit_max            
+Piutang_Melampaui      WIDTH 16

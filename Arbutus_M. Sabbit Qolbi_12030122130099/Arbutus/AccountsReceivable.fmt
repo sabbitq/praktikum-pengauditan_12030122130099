@@ -1,0 +1,23 @@
+FILE_NAME Realsa FIL\AccountsReceivable.FIL
+~Table Imported via OpenXML Excel 22-May-2025 07:11:37
+~.22-May-2025 07:12:20 _ IMPORT OPENEXCEL TO AccountsReceivable FILE "Realsa bahan\AR.xlsx" TABLE "AccountsReceivable" SERVER "LOCAL" FLAT "Realsa FIL\AccountsReceivable.FIL" 
+[FILESIZE] 299
+[LASTVIEW] "AccountsReceivable"
+[FILTER] piutang_minus
+[FILTER] age(DueDate,"20211231")>=181  AND age(DueDate,"20211231")<=10000
+[FILTER] age(DueDate,"20211231")>=151  AND age(DueDate,"20211231")<=180
+[FILTER] age(DueDate,"20211231")>=31  AND age(DueDate,"20211231")<=60
+[FILTER] Amount < 0
+[REFRESH] OPENEXCEL FILE "Realsa bahan\AR.xlsx" TABLE "AccountsReceivable" SERVER "LOCAL" FLAT "Realsa FIL\AccountsReceivable.FIL"
+[SERVER] LOCAL
+[DELIMITED] 0 9 0
+[UTF8]
+[VERSION] 1
+RECORD_LENGTH 89
+InvoiceDate                     DATETIME    1  10   PICTURE "yyyy-mm-dd" NATIVE [D]  
+CustomerNo                      UTF8       11   6   NATIVE [D]  
+DueDate                         DATETIME   17  10   PICTURE "yyyy-mm-dd" NATIVE [D]  
+Amount                          PRINT      27   7 0 DECIMAL '.' NATIVE [D]  
+piutang_minus                   COMPUTED            HIDDEN  
+ #L 1
+ Amount < 0

@@ -1,0 +1,31 @@
+FILE_NAME Realsa FIL\Cash GL.FIL
+~Table Imported via OpenXML Excel 08-May-2025 07:43:49
+~.08-May-2025 07:44:07 _ IMPORT OPENEXCEL TO Cash_GL FILE "Realsa bahan\Cash GL.xlsx" TABLE "Sheet1" SERVER "LOCAL" FLAT "Realsa FIL\Cash GL.FIL" 
+[FILESIZE] 100
+[LASTVIEW] "Cash_GL"
+[FILTER] Status_Control="Level 3 - Direktur Utama  "
+[FILTER] Status_Control="Level 1 - Kepala Bagian   "
+[FILTER] Amount_Credit=5336887
+[FILTER] Amount_Credit=50535720
+[FILTER] Amount_Credit=100200000
+[FILTER] Amount_Credit>0
+[FILTER] Amount_Credit=0
+[REFRESH] OPENEXCEL FILE "Realsa bahan\Cash GL.xlsx" TABLE "Sheet1" SERVER "LOCAL" FLAT "Realsa FIL\Cash GL.FIL"
+[SERVER] LOCAL
+[DELIMITED] 0 9 0
+[UTF8]
+[VERSION] 1
+RECORD_LENGTH 150
+Posting_Date                    DATETIME    1  10   PICTURE "yyyy-mm-dd" NATIVE [D]  
+Voucher_Number                  PRINT      11   5 0 DECIMAL '.' NATIVE [D]  
+Voucher__Description            UTF8       16  10   NATIVE [D]  
+Account_Number                  PRINT      26   3 0 DECIMAL '.' NATIVE [D]  
+Amount_Debit                    PRINT      29   9 0 DECIMAL '.' NATIVE [D]  
+Amount_Credit                   PRINT      38   9 0 DECIMAL '.' NATIVE [D]  
+Balance                         PRINT      47   9 0 DECIMAL '.' NATIVE [D]  
+Status_Control                  COMPUTED            AS "Status Control"  
+ #C 4 26
+ "Level 1 - Kepala Bagian" IF Between( Amount_Credit , 20000000, 50000000)
+ "Level 2 - Manajer Keuangan" IF Between( Amount_Credit , 50000001, 100000000)
+ "Level 3 - Direktur Utama" IF Amount_Credit > 100000000
+ "None"

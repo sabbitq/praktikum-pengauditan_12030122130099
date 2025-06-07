@@ -1,0 +1,10 @@
+[SKIP] 0
+[TLINES] 1
+[RLINES] 1
+[LINE] 1
+Cost_Date             
+Product_Description   
+Product_Number         WIDTH 14
+Quantitiy              WIDTH 8
+Cost_per_unit          WIDTH 11
+Inventory_Cost         WIDTH 13

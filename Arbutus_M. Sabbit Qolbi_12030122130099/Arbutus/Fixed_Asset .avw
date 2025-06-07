@@ -1,0 +1,17 @@
+[SKIP] 0
+[TLINES] 1
+[RLINES] 1
+[LINE] 1
+No                    
+Nama_dan_spesifikasi  
+Jenis_Aset            
+Unit                  
+Tanggal_Perolehan      WIDTH 15
+Harga_Perolehan        WIDTH 14
+Tarif_Penyusutan       WIDTH 14
+Akumulasi_2020         WIDTH 13
+Nilai_Buku2020         WIDTH 13
+Penyusutan_2021        WIDTH 14
+Akumulasi_2021         WIDTH 13
+Nilai_Buku2021         WIDTH 13
+Verifikasi_Penyusutan_2021   WIDTH 26

@@ -1,0 +1,19 @@
+FILE_NAME Realsa Export\Piutang Per Customer.fil
+~Table Imported via OpenXML Excel 22-May-2025 07:11:37
+~.22-May-2025 07:12:20 _ IMPORT OPENEXCEL TO AccountsReceivable FILE "Realsa bahan\AR.xlsx" TABLE "AccountsReceivable" SERVER "LOCAL" FLAT "Realsa FIL\AccountsReceivable.FIL" 
+~.22-May-2025 08:30:07 AccountsReceivable CLASSIFY ON CustomerNo ACCUMULATE Amount TO "D:\M. Sabbit Qolbi_12030122130099\Realsa Export\Piutang Per Customer" OPEN TOP ALL
+~:CLASSIFY:AccountsReceivable:CustomerNo
+~Input : Records:299         Control Total:0                    
+~Output: Records:36          Control Total:0                    
+[FILESIZE] 36
+[LASTVIEW] "Piutang_Per_Customer"
+[FILTER] Amount < 0
+[SERVER] LOCAL
+[UTF8]
+[VERSION] 1
+RECORD_LENGTH 60
+CustomerNo                      UTF16       1  12    
+Count                           ARBUTUS    13  12 0 WIDTH 8  
+COUNT_PERCENTAGE                ARBUTUS    25  12 2 AS "Percent;of Count" WIDTH 8  
+FIELD_PERCENTAGE                ARBUTUS    37  12 2 AS "Percent;of Field" WIDTH 8  
+Amount                          ARBUTUS    49  12 0  

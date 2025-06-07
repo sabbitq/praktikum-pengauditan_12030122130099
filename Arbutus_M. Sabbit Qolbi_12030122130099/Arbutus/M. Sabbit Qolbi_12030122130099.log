@@ -1,0 +1,2177 @@
+Log File D:\M. Sabbit Qolbi_12030122130099\M. Sabbit Qolbi_12030122130099.log Opened at 07:13:03 on 08-May-2025
+Log File D:\M. Sabbit Qolbi_12030122130099\M. Sabbit Qolbi_12030122130099.log Opened at 07:38:41 on 08-May-2025
+'' deleted.
+@ IMPORT OPENEXCEL TO Cash_GL FILE "Realsa bahan\Cash GL.xlsx" TABLE "Sheet1" SERVER "LOCAL" FLAT "Realsa FIL\Cash GL.FIL" 
+@ OPEN Cash_GL TABLE 0
+  7 fields activated
+@ VERIFY FIELDS ALL ERRORLIMIT 20
+  0 data validity errors detected
+@ SEQUENCE ON Voucher_Number ERRORLIMIT 20
+  0 data sequence errors detected
+@ STATISTICS ON Amount_Credit NUMBER 5
+<<< Table Data:Cash_GLSTATISTICSAmount_Credit >>>
+Field: Amount_CreditNumberTotalAverage
+
+Positive992,942,231,52929,719,510
+Zeros1
+Negative000
+Totals1002,942,231,52929,422,315
+Abs Value2,942,231,529
+Range100,200,000
+
+<<< Table End >>>
+<<< Table Data:Cash_GLSORTAmount_Credit:Amount_Credit >>>
+HighestLowest
+
+100,200,0000
+50,535,7205,336,887
+50,290,6375,369,011
+49,720,6745,629,517
+49,551,2985,643,969
+
+<<< Table End >>>
+@ SET FILTER TO Amount_Credit=0
+@ SET FILTER TO Amount_Credit>0
+@ SET FILTER TO Amount_Credit=100200000
+@ SET FILTER TO Amount_Credit=50535720
+@ SET FILTER TO Amount_Credit=5336887
+@ GAPS ON Voucher_Number PRESORT
+Presorting Primary data file.
+  0 gaps detected
+  1 of 100 matched the Filter: Amount_Credit=5336887
+@ OPEN Cash_GL
+Closing Table Cash_GL (Table 0) and all active fields
+  7 fields activated
+@ OPEN Cash_GL
+Closing Table Cash_GL (Table 0) and all active fields
+  7 fields activated
+@ GAPS ON  Voucher_Number MISSING 5 PRESORT
+Presorting Primary data file.
+<<< Table Data:Cash_GLGAPS >>>
+Gap Start orGap EndNumber of
+Missing ItemMissing Items
+
+12100021000
+
+<<< Table End >>>
+  1 gaps detected
+@ DUPLICATES ON Voucher_Number PRESORT
+Presorting Primary data file.
+  0 duplicates detected
+@ EXTRACT FIELDS Amount_Credit TO "otorisasi1" OPEN IF Between( Amount_Credit , 20000000, 50000000)
+  69 of 100 met the test: Between( Amount_Credit , 20000000, 50000000)
+  Extraction to Table otorisasi1.fil is complete
+  69 records produced
+@ OPEN otorisasi1
+Closing Table Cash_GL (Table 0) and all active fields
+  1 fields activated
+@ CLOSE
+Closing Table otorisasi1 (Table 0) and all active fields
+@ DELETE FORMAT otorisasi1
+Data file 'D:\M. Sabbit Qolbi_12030122130099\otorisasi1.fil' deleted.
+Format 'otorisasi1' deleted.
+View 'otorisasi1' deleted.
+@ OPEN Cash_GL
+  7 fields activated
+@ OPEN Cash_GL
+Closing Table Cash_GL (Table 0) and all active fields
+  7 fields activated
+@ EXTRACT FIELDS Amount_Credit TO "D:\M. Sabbit Qolbi_12030122130099\Realsa FIL\otorisasi1" OPEN IF Between( Amount_Credit , 20000000, 50000000)
+  69 of 100 met the test: Between( Amount_Credit , 20000000, 50000000)
+  Extraction to Table D:\M. Sabbit Qolbi_12030122130099\Realsa FIL\otorisasi1.fil is complete
+  69 records produced
+@ OPEN otorisasi1
+Closing Table Cash_GL (Table 0) and all active fields
+  1 fields activated
+You may not rename currently open Tables
+@ CLOSE
+Closing Table otorisasi1 (Table 0) and all active fields
+@ OPEN otorisasi_cash_1
+  1 fields activated
+@ OPEN Cash_GL
+Closing Table otorisasi_cash_1 (Table 0) and all active fields
+  7 fields activated
+@ OPEN otorisasi_cash_1
+Closing Table Cash_GL (Table 0) and all active fields
+  1 fields activated
+@ OPEN Cash_GL
+Closing Table otorisasi_cash_1 (Table 0) and all active fields
+  7 fields activated
+@ OPEN Cash_GL
+Closing Table Cash_GL (Table 0) and all active fields
+  7 fields activated
+@ DELETE FORMAT otorisasi_cash_1
+Data file 'Realsa FIL\otorisasi1.fil' deleted.
+Format 'otorisasi_cash_1' deleted.
+View 'otorisasi_cash_1' deleted.
+@ EXTRACT RECORD TO "D:\M. Sabbit Qolbi_12030122130099\Realsa FIL\otorisasi cash 1" OPEN IF Between( Amount_Credit , 20000000, 50000000)
+  69 of 100 met the test: Between( Amount_Credit , 20000000, 50000000)
+  Extraction to Table D:\M. Sabbit Qolbi_12030122130099\Realsa FIL\otorisasi cash 1.fil is complete
+  69 records produced
+@ OPEN otorisasi_cash_1
+Closing Table Cash_GL (Table 0) and all active fields
+  7 fields activated
+@ OPEN Cash_GL
+Closing Table otorisasi_cash_1 (Table 0) and all active fields
+  7 fields activated
+@ OPEN Cash_GL
+Closing Table Cash_GL (Table 0) and all active fields
+  7 fields activated
+@ OPEN otorisasi_cash_1
+Closing Table Cash_GL (Table 0) and all active fields
+  7 fields activated
+@ OPEN otorisasi_cash_1
+Closing Table otorisasi_cash_1 (Table 0) and all active fields
+  7 fields activated
+@ EXTRACT RECORD TO "D:\M. Sabbit Qolbi_12030122130099\Realsa FIL\otorisasi cash 2" OPEN IF Between( Amount_Credit , 50000001, 100000000)
+  0 of 69 met the test: Between( Amount_Credit , 50000001, 100000000)
+  Extraction to Table D:\M. Sabbit Qolbi_12030122130099\Realsa FIL\otorisasi cash 2.fil is complete
+  0 records produced
+@ OPEN otorisasi_cash_2
+Closing Table otorisasi_cash_1 (Table 0) and all active fields
+  7 fields activated
+@ OPEN Cash_GL
+Closing Table otorisasi_cash_2 (Table 0) and all active fields
+  7 fields activated
+@ OPEN Cash_GL
+Closing Table Cash_GL (Table 0) and all active fields
+  7 fields activated
+Closing Table Cash_GL (Table 0) and all active fields
+Log File D:\M. Sabbit Qolbi_12030122130099\M. Sabbit Qolbi_12030122130099.log Opened at 08:00:38 on 08-May-2025
+@ OPEN Cash_GL
+  7 fields activated
+@ OPEN otorisasi_cash_2
+Closing Table Cash_GL (Table 0) and all active fields
+  7 fields activated
+@ OPEN otorisasi_cash_1
+Closing Table otorisasi_cash_2 (Table 0) and all active fields
+  7 fields activated
+@ OPEN otorisasi_cash_2
+Closing Table otorisasi_cash_1 (Table 0) and all active fields
+  7 fields activated
+@ OPEN otorisasi_cash_1
+Closing Table otorisasi_cash_2 (Table 0) and all active fields
+  7 fields activated
+@ OPEN Cash_GL
+Closing Table otorisasi_cash_1 (Table 0) and all active fields
+  7 fields activated
+@ OPEN otorisasi_cash_2
+Closing Table Cash_GL (Table 0) and all active fields
+  7 fields activated
+@ OPEN otorisasi_cash_1
+Closing Table otorisasi_cash_2 (Table 0) and all active fields
+  7 fields activated
+@ DELETE FORMAT otorisasi_cash_2
+Data file 'Realsa FIL\otorisasi cash 2.fil' deleted.
+Format 'otorisasi_cash_2' deleted.
+View 'otorisasi_cash_2' deleted.
+@ OPEN Cash_GL
+Closing Table otorisasi_cash_1 (Table 0) and all active fields
+  7 fields activated
+@ EXTRACT RECORD TO "D:\M. Sabbit Qolbi_12030122130099\Realsa FIL\otorisasi cash 2" OPEN IF Between( Amount_Credit , 50000001, 100000000)
+  2 of 100 met the test: Between( Amount_Credit , 50000001, 100000000)
+  Extraction to Table D:\M. Sabbit Qolbi_12030122130099\Realsa FIL\otorisasi cash 2.fil is complete
+  2 records produced
+@ OPEN otorisasi_cash_2
+Closing Table Cash_GL (Table 0) and all active fields
+  7 fields activated
+@ OPEN Cash_GL
+Closing Table otorisasi_cash_2 (Table 0) and all active fields
+  7 fields activated
+@ OPEN Cash_GL
+Closing Table Cash_GL (Table 0) and all active fields
+  7 fields activated
+@ EXTRACT RECORD TO "D:\M. Sabbit Qolbi_12030122130099\Realsa FIL\otorisasi cash 3" OPEN IF Amount_Credit  > 100000000
+  1 of 100 met the test: Amount_Credit  > 100000000
+  Extraction to Table D:\M. Sabbit Qolbi_12030122130099\Realsa FIL\otorisasi cash 3.fil is complete
+  1 records produced
+@ OPEN otorisasi_cash_3
+Closing Table Cash_GL (Table 0) and all active fields
+  7 fields activated
+@ OPEN otorisasi_cash_2
+Closing Table otorisasi_cash_3 (Table 0) and all active fields
+  7 fields activated
+@ OPEN otorisasi_cash_2
+Closing Table otorisasi_cash_2 (Table 0) and all active fields
+  7 fields activated
+@ OPEN otorisasi_cash_1
+Closing Table otorisasi_cash_2 (Table 0) and all active fields
+  7 fields activated
+@ OPEN Cash_GL
+Closing Table otorisasi_cash_1 (Table 0) and all active fields
+  7 fields activated
+@ OPEN Cash_GL
+Closing Table Cash_GL (Table 0) and all active fields
+  8 fields activated
+@ CLASSIFY ON Status_Control ACCUMULATE Amount_Credit TOP ALL
+<<< Table Data:Cash_GLCLASSIFYStatus_Control >>>
+Page ...   1                                         08-May-2025  08:27:21
+Produced with Arbutus Analyzer by: Universitas Diponegoro, LabAkt10
+
+Status_Control   CountPercent of CountPercent of FieldAmount_Credit
+
+Level 1 - Kepala Bagian         69 69.00% 81.79%2406,342,244
+None                            28 28.00% 11.38%334,862,928
+Level 2 - Manajer Keuangan       2  2.00%  3.43%100,826,357
+Level 3 - Direktur Utama         1  1.00%  3.41%100,200,000
+
+                               100100.00%100.00%2942,231,529
+
+<<< Table End >>>
+  4 records produced
+@ SET FILTER TO Status_Control="Level 1 - Kepala Bagian   "
+@ OPEN Cash_GL
+Closing Table Cash_GL (Table 0) and all active fields
+  8 fields activated
+@ SET FILTER TO Status_Control="Level 3 - Direktur Utama  "
+@ OPEN Cash_GL
+Closing Table Cash_GL (Table 0) and all active fields
+  8 fields activated
+@ QUIT
+Closing Table Cash_GL (Table 0) and all active fields
+Log File D:\M. Sabbit Qolbi_12030122130099\M. Sabbit Qolbi_12030122130099.log Opened at 12:01:57 on 14-May-2025
+@ OPEN Cash_GL
+  8 fields activated
+Closing Table Cash_GL (Table 0) and all active fields
+Log File D:\M. Sabbit Qolbi_12030122130099\M. Sabbit Qolbi_12030122130099.log Opened at 07:03:40 on 22-May-2025
+@ OPEN Cash_GL
+  8 fields activated
+@ OPEN otorisasi_cash_1
+Closing Table Cash_GL (Table 0) and all active fields
+  7 fields activated
+@ OPEN otorisasi_cash_2
+Closing Table otorisasi_cash_1 (Table 0) and all active fields
+  7 fields activated
+@ OPEN otorisasi_cash_3
+Closing Table otorisasi_cash_2 (Table 0) and all active fields
+  7 fields activated
+@ OPEN otorisasi_cash_3
+Closing Table otorisasi_cash_3 (Table 0) and all active fields
+  7 fields activated
+@ OPEN otorisasi_cash_1
+Closing Table otorisasi_cash_3 (Table 0) and all active fields
+  7 fields activated
+@ OPEN Cash_GL
+Closing Table otorisasi_cash_1 (Table 0) and all active fields
+  8 fields activated
+@ OPEN otorisasi_cash_1
+Closing Table Cash_GL (Table 0) and all active fields
+  7 fields activated
+@ OPEN otorisasi_cash_2
+Closing Table otorisasi_cash_1 (Table 0) and all active fields
+  7 fields activated
+@ OPEN otorisasi_cash_1
+Closing Table otorisasi_cash_2 (Table 0) and all active fields
+  7 fields activated
+@ OPEN Cash_GL
+Closing Table otorisasi_cash_1 (Table 0) and all active fields
+  8 fields activated
+@ OPEN otorisasi_cash_1
+Closing Table Cash_GL (Table 0) and all active fields
+  7 fields activated
+@ OPEN Cash_GL
+Closing Table otorisasi_cash_1 (Table 0) and all active fields
+  8 fields activated
+@ OPEN Cash_GL
+Closing Table Cash_GL (Table 0) and all active fields
+  8 fields activated
+@ IMPORT OPENEXCEL TO AccountsReceivable FILE "Realsa bahan\AR.xlsx" TABLE "AccountsReceivable" SERVER "LOCAL" FLAT "Realsa FIL\AccountsReceivable.FIL" 
+@ OPEN AccountsReceivable TABLE 1
+  4 fields activated
+@ GAPS ON Amount PRESORT
+Presorting Primary data file.
+<<< Table Data:AccountsReceivableGAPS >>>
+Gap Start orGap EndNumber of
+Missing ItemMissing Items
+
+-892399-8910011399
+-890999-81230178699
+-812299-642801169499
+-64279971799714599
+7180110199930199
+1020011038991899
+1039011052991399
+1053011079992699
+1080011093991399
+1094011163996999
+1164011193992999
+1194011205991199
+1206011278997299
+1279011308992999
+130901131299399
+13130114389912599
+1439011463992499
+1464011522995899
+1523011587996499
+15880117029911499
+1703011724992199
+172501173299799
+1733011751991899
+1752011773992199
+1774011808993499
+180901504499323599
+5045015062991799
+50630150639999
+506401506999599
+507001507499499
+507501507899399
+507901508899999
+508901509499599
+5095015135994099
+5136015157992199
+5158015173991599
+517401518199799
+5182015195991399
+5196015224992899
+522501522799299
+5228015238991099
+5239015249991099
+52500152509999
+525101525399299
+5254015269991599
+5270015281991199
+5282015294991299
+52950152959999
+5296015314991899
+5315015330991599
+53310154389910799
+543901544499599
+5445015474992999
+5475015493991899
+54940154949999
+549501549699199
+5497015514991799
+551501551799299
+5518015538992099
+553901554099199
+554101554599499
+55460155469999
+554701555499799
+555501556399899
+5564015577991399
+5578015613993599
+5614015627991399
+5628015643991599
+564401564999599
+565001565799799
+565801566299499
+5663015682991999
+568301569199899
+569201569499299
+569501570399899
+57040157049999
+570501571499999
+571501572199699
+5722015775995399
+5776015802992699
+5803015832992999
+583301583499199
+5835015851991699
+5852015891993999
+589201589999799
+5900015910991099
+5911015953994299
+595401595699299
+59570159579999
+595801596199399
+5962016007994599
+600801601499699
+6015016027991299
+602801603299499
+603301603499199
+6035016082994799
+6083016117993499
+6118016142992499
+6143016157991499
+615801616399599
+616401617099699
+61710161719999
+61720161729999
+617301617599299
+6176016192991699
+6193016252995999
+6253016279992699
+6280016328994899
+632901633499599
+6335016362992799
+636301636899599
+6369016422995399
+6423016435991299
+64360164369999
+643701643899199
+643901644299399
+644301645199899
+64520164529999
+645301646199899
+646201646499299
+646501647499999
+6475016526995199
+652701652899199
+652901653199299
+6532016544991299
+6545016572992799
+6573016586991399
+6587016610992399
+661101661499399
+661501661899399
+6619016637991899
+663801664699899
+6647016670992399
+6671016718994799
+671901672699799
+672701673499799
+6735016757992299
+6758016853999599
+6854016866991299
+6867016903993699
+690401690799399
+6908016944993699
+6945016964991999
+69650169659999
+6966016979991399
+6980017014993499
+701501702499999
+7025017061993699
+7062017127996599
+7128017162993499
+7163017193993099
+7194017213991999
+721401721599199
+7216017228991299
+722901723399499
+723401724399999
+724401725399999
+725401725799399
+725801726399599
+726401726599199
+726601727099499
+7271017313994299
+7314017326991299
+7327017339991299
+7340017420998099
+742101742699599
+74270175599913299
+7560017601994199
+760201760699499
+760701761599899
+761601762199599
+762201762799599
+7628017699997199
+7700017718991899
+77190177199999
+7720017737991799
+7738017770993299
+777101777499399
+7775017793991899
+779401779599199
+7796017810991499
+7811017829991899
+783001783299299
+783301783899599
+7839017880994199
+78810178819999
+788201788499299
+7885017918993399
+7919017935991699
+7936017960992499
+7961018022996199
+8023018048992599
+8049018077992899
+807801808599799
+8086018142995699
+814301814899599
+8149018190994199
+8191018217992699
+821801821999199
+8220018230991099
+82310182319999
+8232018296996499
+829701830099399
+830101830899799
+83090183099999
+831001831199199
+831201831699499
+831701831899199
+831901832399499
+8324018338991499
+8339018349991099
+8350018393994399
+8394018412991899
+8413018437992499
+8438018479994199
+8480018502992299
+8503018516991399
+8517018531991499
+8532018560992899
+8561018580991999
+858101858599499
+858601859299699
+8593018617992499
+8618018631991399
+863201863999799
+8640018700996099
+870101870799699
+8708018739993199
+8740018759991999
+8760018772991299
+877301878299999
+8783018805992299
+8806018825991999
+8826018841991599
+884201884599399
+884601885299699
+885301885699399
+8857018872991599
+8873018938996599
+8939018950991199
+895101895499399
+8955018993993899
+8994019005991199
+9006019050994499
+905101905899799
+905901906099199
+9061019098993799
+9099019111991299
+9112019161994999
+916201917099899
+9171019201993099
+920201921199999
+9212019260994899
+926101926399299
+926401926799399
+9268019288992099
+9289019340995199
+9341019354991399
+935501936099599
+9361019380991999
+9381019405992499
+940601941299699
+9413019448993599
+9449019470992199
+9471019490991999
+949101949999899
+950001950299299
+9503019539993699
+9540019615997599
+96160196169999
+961701961899199
+9619019632991399
+963301963699399
+96370196379999
+9638019649991199
+9650019683993399
+968401968699299
+968701968999299
+9690019715992599
+9716019742992699
+974301975299999
+975301975899599
+9759019770991199
+9771019781991099
+9782019792991099
+9793019856996399
+9857019913995699
+99140199149999
+9915019933491849
+993351993699349
+
+<<< Table End >>>
+  290 gaps detected
+@ GAPS ON Amount MISSING 5 PRESORT
+Presorting Primary data file.
+<<< Table Data:AccountsReceivableGAPS >>>
+Gap Start orGap EndNumber of
+Missing ItemMissing Items
+
+-892399-8910011399
+-890999-81230178699
+-812299-642801169499
+-64279971799714599
+7180110199930199
+1020011038991899
+1039011052991399
+1053011079992699
+1080011093991399
+1094011163996999
+1164011193992999
+1194011205991199
+1206011278997299
+1279011308992999
+130901131299399
+13130114389912599
+1439011463992499
+1464011522995899
+1523011587996499
+15880117029911499
+1703011724992199
+172501173299799
+1733011751991899
+1752011773992199
+1774011808993499
+180901504499323599
+5045015062991799
+50630150639999
+506401506999599
+507001507499499
+507501507899399
+507901508899999
+508901509499599
+5095015135994099
+5136015157992199
+5158015173991599
+517401518199799
+5182015195991399
+5196015224992899
+522501522799299
+5228015238991099
+5239015249991099
+52500152509999
+525101525399299
+5254015269991599
+5270015281991199
+5282015294991299
+52950152959999
+5296015314991899
+5315015330991599
+53310154389910799
+543901544499599
+5445015474992999
+5475015493991899
+54940154949999
+549501549699199
+5497015514991799
+551501551799299
+5518015538992099
+553901554099199
+554101554599499
+55460155469999
+554701555499799
+555501556399899
+5564015577991399
+5578015613993599
+5614015627991399
+5628015643991599
+564401564999599
+565001565799799
+565801566299499
+5663015682991999
+568301569199899
+569201569499299
+569501570399899
+57040157049999
+570501571499999
+571501572199699
+5722015775995399
+5776015802992699
+5803015832992999
+583301583499199
+5835015851991699
+5852015891993999
+589201589999799
+5900015910991099
+5911015953994299
+595401595699299
+59570159579999
+595801596199399
+5962016007994599
+600801601499699
+6015016027991299
+602801603299499
+603301603499199
+6035016082994799
+6083016117993499
+6118016142992499
+6143016157991499
+615801616399599
+616401617099699
+61710161719999
+61720161729999
+617301617599299
+6176016192991699
+6193016252995999
+6253016279992699
+6280016328994899
+632901633499599
+6335016362992799
+636301636899599
+6369016422995399
+6423016435991299
+64360164369999
+643701643899199
+643901644299399
+644301645199899
+64520164529999
+645301646199899
+646201646499299
+646501647499999
+6475016526995199
+652701652899199
+652901653199299
+6532016544991299
+6545016572992799
+6573016586991399
+6587016610992399
+661101661499399
+661501661899399
+6619016637991899
+663801664699899
+6647016670992399
+6671016718994799
+671901672699799
+672701673499799
+6735016757992299
+6758016853999599
+6854016866991299
+6867016903993699
+690401690799399
+6908016944993699
+6945016964991999
+69650169659999
+6966016979991399
+6980017014993499
+701501702499999
+7025017061993699
+7062017127996599
+7128017162993499
+7163017193993099
+7194017213991999
+721401721599199
+7216017228991299
+722901723399499
+723401724399999
+724401725399999
+725401725799399
+725801726399599
+726401726599199
+726601727099499
+7271017313994299
+7314017326991299
+7327017339991299
+7340017420998099
+742101742699599
+74270175599913299
+7560017601994199
+760201760699499
+760701761599899
+761601762199599
+762201762799599
+7628017699997199
+7700017718991899
+77190177199999
+7720017737991799
+7738017770993299
+777101777499399
+7775017793991899
+779401779599199
+7796017810991499
+7811017829991899
+783001783299299
+783301783899599
+7839017880994199
+78810178819999
+788201788499299
+7885017918993399
+7919017935991699
+7936017960992499
+7961018022996199
+8023018048992599
+8049018077992899
+807801808599799
+8086018142995699
+814301814899599
+8149018190994199
+8191018217992699
+821801821999199
+8220018230991099
+82310182319999
+8232018296996499
+829701830099399
+830101830899799
+83090183099999
+831001831199199
+831201831699499
+831701831899199
+831901832399499
+8324018338991499
+8339018349991099
+8350018393994399
+8394018412991899
+8413018437992499
+8438018479994199
+8480018502992299
+8503018516991399
+8517018531991499
+8532018560992899
+8561018580991999
+858101858599499
+858601859299699
+8593018617992499
+8618018631991399
+863201863999799
+8640018700996099
+870101870799699
+8708018739993199
+8740018759991999
+8760018772991299
+877301878299999
+8783018805992299
+8806018825991999
+8826018841991599
+884201884599399
+884601885299699
+885301885699399
+8857018872991599
+8873018938996599
+8939018950991199
+895101895499399
+8955018993993899
+8994019005991199
+9006019050994499
+905101905899799
+905901906099199
+9061019098993799
+9099019111991299
+9112019161994999
+916201917099899
+9171019201993099
+920201921199999
+9212019260994899
+926101926399299
+926401926799399
+9268019288992099
+9289019340995199
+9341019354991399
+935501936099599
+9361019380991999
+9381019405992499
+940601941299699
+9413019448993599
+9449019470992199
+9471019490991999
+949101949999899
+950001950299299
+9503019539993699
+9540019615997599
+96160196169999
+961701961899199
+9619019632991399
+963301963699399
+96370196379999
+9638019649991199
+9650019683993399
+968401968699299
+968701968999299
+9690019715992599
+9716019742992699
+974301975299999
+975301975899599
+9759019770991199
+9771019781991099
+9782019792991099
+9793019856996399
+9857019913995699
+99140199149999
+9915019933491849
+993351993699349
+
+<<< Table End >>>
+  290 gaps detected
+@ OPEN Cash_GL TABLE 1
+Closing Table AccountsReceivable (Table 1) and all active fields
+  8 fields activated
+@ OPEN AccountsReceivable TABLE 1
+Closing Table Cash_GL (Table 1) and all active fields
+  4 fields activated
+@ VERIFY
+Enter the fields to VERIFY
+@ VERIFY FIELDS InvoiceDate DueDate CustomerNo Amount ERRORLIMIT 20
+  0 data validity errors detected
+@ OPEN otorisasi_cash_1 TABLE 1
+Closing Table AccountsReceivable (Table 1) and all active fields
+  7 fields activated
+@ OPEN AccountsReceivable TABLE 1
+Closing Table otorisasi_cash_1 (Table 1) and all active fields
+  4 fields activated
+@ DUPLICATES ON InvoiceDate DueDate CustomerNo Amount PRESORT
+Presorting Primary data file.
+  0 duplicates detected
+@ GAPS ON InvoiceDate MISSING 5 PRESORT
+Presorting Primary data file.
+<<< Table Data:AccountsReceivableGAPS >>>
+Gap Start orGap EndNumber of
+Missing ItemMissing Items
+
+10-Jan-202105-May-2021116
+07-May-202129-Jun-202154
+01-Jul-202103-Oct-202195
+05-Oct-202117-Oct-202113
+20-Oct-20211
+21-Oct-20211
+23-Oct-20211
+24-Oct-20211
+26-Oct-202131-Oct-20216
+10-Nov-20211
+
+<<< Table End >>>
+  10 gaps detected
+@ CLOSE
+Closing Table AccountsReceivable (Table 1) and all active fields
+@ SET TABLE Cash_GL
+@ VERIFY FIELDS ALL ERRORLIMIT 20
+Computed fields bypassed, as all values considered valid
+  0 data validity errors detected
+@ DUPLICATES ON Voucher_Number PRESORT
+Presorting Primary data file.
+  0 duplicates detected
+@ GAPS ON Voucher_Number MISSING 5 PRESORT
+Presorting Primary data file.
+<<< Table Data:Cash_GLGAPS >>>
+Gap Start orGap EndNumber of
+Missing ItemMissing Items
+
+12100021000
+
+<<< Table End >>>
+  1 gaps detected
+@ OPEN otorisasi_cash_1
+Closing Table Cash_GL (Table 0) and all active fields
+  7 fields activated
+@ EXPORT EXCEL TO "D:\M. Sabbit Qolbi_12030122130099\Realsa Export\otorisasi_cash_1" TABLE otorisasi_cash_1 FIELDS ALL
+  69 records produced
+  Output to D:\M. Sabbit Qolbi_12030122130099\Realsa Export\otorisasi_cash_1.xlsx is done
+@ OPEN otorisasi_cash_2
+Closing Table otorisasi_cash_1 (Table 0) and all active fields
+  7 fields activated
+@ EXPORT EXCEL TO "D:\M. Sabbit Qolbi_12030122130099\Realsa Export\otorisasi_cash_2" TABLE otorisasi_cash_2 FIELDS ALL
+  2 records produced
+  Output to D:\M. Sabbit Qolbi_12030122130099\Realsa Export\otorisasi_cash_2.xlsx is done
+@ OPEN otorisasi_cash_3
+Closing Table otorisasi_cash_2 (Table 0) and all active fields
+  7 fields activated
+@ OPEN otorisasi_cash_3
+Closing Table otorisasi_cash_3 (Table 0) and all active fields
+  7 fields activated
+@ EXPORT EXCEL TO "D:\M. Sabbit Qolbi_12030122130099\Realsa Export\otorisasi_cash_3" TABLE otorisasi_cash_3 FIELDS ALL
+  1 records produced
+  Output to D:\M. Sabbit Qolbi_12030122130099\Realsa Export\otorisasi_cash_3.xlsx is done
+@ OPEN Cash_GL
+Closing Table otorisasi_cash_3 (Table 0) and all active fields
+  8 fields activated
+@ CLASSIFY ON Status_Control ACCUMULATE Amount_Credit TO "Clasify_Status Control" OPEN TOP ALL
+  4 records produced
+  Output to Clasify_Status Control.fil is done
+@ OPEN Clasify_Status_Control
+Closing Table Cash_GL (Table 0) and all active fields
+  5 fields activated
+@ OPEN Cash_GL
+Closing Table Clasify_Status_Control (Table 0) and all active fields
+  8 fields activated
+@ OPEN Clasify_Status_Control
+Closing Table Cash_GL (Table 0) and all active fields
+  5 fields activated
+@ OPEN otorisasi_cash_1
+Closing Table Clasify_Status_Control (Table 0) and all active fields
+  7 fields activated
+@ OPEN Clasify_Status_Control
+Closing Table otorisasi_cash_1 (Table 0) and all active fields
+  5 fields activated
+@ OPEN Cash_GL
+Closing Table Clasify_Status_Control (Table 0) and all active fields
+  8 fields activated
+@ CLASSIFY ON Status_Control ACCUMULATE Amount_Credit TOP ALL
+<<< Table Data:Cash_GLCLASSIFYStatus_Control >>>
+Page ...   1                                         22-May-2025  07:37:36
+Produced with Arbutus Analyzer by: Universitas Diponegoro, LabAkt10
+
+Status_Control   CountPercent of CountPercent of FieldAmount_Credit
+
+Level 1 - Kepala Bagian         69 69.00% 81.79%2406,342,244
+None                            28 28.00% 11.38%334,862,928
+Level 2 - Manajer Keuangan       2  2.00%  3.43%100,826,357
+Level 3 - Direktur Utama         1  1.00%  3.41%100,200,000
+
+                               100100.00%100.00%2942,231,529
+
+<<< Table End >>>
+  4 records produced
+@ OPEN AccountsReceivable
+Closing Table Cash_GL (Table 0) and all active fields
+  4 fields activated
+@ VERIFY FIELDS ALL ERRORLIMIT 20
+  0 data validity errors detected
+@ DUPLICATES ON CustomerNo PRESORT
+Presorting Primary data file.
+<<< Table Data:AccountsReceivableDUPLICATESCCustomerNo >>>
+CustomerNoCount
+
+0515932
+0560162
+06500337
+1764376
+2020282
+2220064
+2305757
+2580242
+26200133
+3010372
+37600518
+4786043
+50165728
+5135743
+51637243
+5180088
+64146411
+7846472
+7954013
+7973522
+81100224
+8124654
+8360047
+8780352
+92500730
+9380104
+
+<<< Table End >>>
+  263 duplicates detected
+@ GAPS ON CustomerNo MISSING 5 PRESORT
+Presorting Primary data file.
+<<< Table Data:AccountsReceivableGAPS >>>
+Gap Start orGap EndNumber of
+Missing ItemMissing Items
+
+51594560154422
+56017650028986
+650049762632623
+9762811323515608
+11323717643663200
+17643820202725590
+20202922200519977
+2220072305748568
+23057625802327448
+2580252620003976
+26200227709615095
+27709829739620299
+2973983010363639
+30103832916828131
+32917037600446835
+376006478603102598
+47860550165623052
+50165851357311916
+5135755163712797
+5163735180071635
+51800953518817180
+53519056226927080
+56227164146379193
+641465778087136623
+7780897846466558
+78464879540010753
+7954027973511950
+79735381100113649
+8110038124641462
+81246683600323538
+83600586903233028
+8690348780349001
+87803692500646971
+92500893800913002
+93801199440256392
+
+<<< Table End >>>
+  35 gaps detected
+@ SEQUENCE ON CustomerNo ERRORLIMIT 20
+<<< Table Data:AccountsReceivableSEQUENCE >>>
+RecordCustomerNo
+
+4516372
+8518008
+9501657
+10222006
+23812465
+25478604
+26065003
+28262001
+32065003
+35262001
+38376005
+48065003
+51065003
+56501657
+60376005
+64230575
+66065003
+71065003
+73065003
+79065003
+
+<<< Table End >>>
+Maximum error limit reached
+  20 data sequence errors detected
+@ TOTAL FIELDS Amount
+<<< Table Data:AccountsReceivableTOTAL >>>
+Field NameTotal
+
+Amount200,127,050
+
+<<< Table End >>>
+@ IMPORT OPENEXCEL TO Customer_Credit_Limit FILE "Realsa bahan\customer credit limit.xlsx" TABLE "Sheet1" SERVER "LOCAL" FLAT "Realsa FIL\Customer Credit Limit.FIL" 
+@ OPEN Customer_Credit_Limit TABLE 1
+  2 fields activated
+@ TOTAL FIELDS Credit_max
+<<< Table Data:Customer_Credit_LimitTOTAL >>>
+Field NameTotal
+
+Credit_max500,000,000
+
+<<< Table End >>>
+@ OPEN Cash_GL
+Closing Table AccountsReceivable (Table 0) and all active fields
+  8 fields activated
+@ EXPORT EXCEL TO "D:\M. Sabbit Qolbi_12030122130099\Realsa Export\Cash_GL_Control" TABLE Cash_GL FIELDS ALL
+  100 records produced
+  Output to D:\M. Sabbit Qolbi_12030122130099\Realsa Export\Cash_GL_Control.xlsx is done
+@ CLOSE
+Closing Table Cash_GL (Table 0) and all active fields
+@ OPEN Cash_GL TABLE 1
+Closing Table Customer_Credit_Limit (Table 1) and all active fields
+  8 fields activated
+@ OPEN Cash_GL TABLE 1
+Closing Table Cash_GL (Table 1) and all active fields
+  8 fields activated
+@ OPEN Clasify_Status_Control TABLE 1
+Closing Table Cash_GL (Table 1) and all active fields
+  5 fields activated
+@ OPEN Cash_GL TABLE 1
+Closing Table Clasify_Status_Control (Table 1) and all active fields
+  8 fields activated
+@ OPEN Clasify_Status_Control TABLE 1
+Closing Table Cash_GL (Table 1) and all active fields
+  5 fields activated
+@ OPEN AccountsReceivable TABLE 1
+Closing Table Clasify_Status_Control (Table 1) and all active fields
+  4 fields activated
+@ OPEN Customer_Credit_Limit TABLE 1
+Closing Table AccountsReceivable (Table 1) and all active fields
+  2 fields activated
+@ OPEN Clasify_Status_Control TABLE 1
+Closing Table Customer_Credit_Limit (Table 1) and all active fields
+  5 fields activated
+@ OPEN AccountsReceivable TABLE 1
+Closing Table Clasify_Status_Control (Table 1) and all active fields
+  4 fields activated
+@ OPEN Customer_Credit_Limit SECONDARY
+  2 fields activated
+@ JOIN PRIMARY FIELDS ALL SKEY Credit_max WITH Credit_max TO "D:\M. Sabbit Qolbi_12030122130099\Realsa Export\Piutang Per Customer" OPEN PRESORT SECSORT
+Enter the key field(s) from the PRIMARY Table
+Enter the key field(s) from the PRIMARY Table
+@ JOIN PRIMARY PKEY CustomerNo FIELDS ALL SKEY CustomerNo WITH Credit_max TO "D:\M. Sabbit Qolbi_12030122130099\Realsa Export\Piutang Per Customer" OPEN PRESORT SECSORT
+Presorting Primary data file.
+Presorting Secondary data file.
+  299 records produced
+  0 PRIMARY records unmatched and written with nulls
+  Extraction to Table D:\M. Sabbit Qolbi_12030122130099\Realsa Export\Piutang Per Customer.fil is complete
+@ OPEN Piutang_Per_Customer TABLE 1
+Closing Table AccountsReceivable (Table 1) and all active fields
+  5 fields activated
+@ OPEN Piutang_Per_Customer TABLE 1
+Closing Table Piutang_Per_Customer (Table 1) and all active fields
+  5 fields activated
+@ CLOSE
+Closing Table Piutang_Per_Customer (Table 1) and all active fields
+@ CLOSE SECONDARY
+Closing Table Customer_Credit_Limit (Secondary) and all active fields
+@ DELETE FORMAT Piutang_Per_Customer
+Data file 'Realsa Export\Piutang Per Customer.fil' deleted.
+Format 'Piutang_Per_Customer' deleted.
+View 'Piutang_Per_Customer' deleted.
+@ OPEN AccountsReceivable
+  4 fields activated
+@ CLASSIFY ON CustomerNo ACCUMULATE Amount TO "D:\M. Sabbit Qolbi_12030122130099\Realsa Export\Piutang Per Customer" OPEN TOP ALL
+  36 records produced
+  Output to D:\M. Sabbit Qolbi_12030122130099\Realsa Export\Piutang Per Customer.fil is done
+@ OPEN Piutang_Per_Customer
+Closing Table AccountsReceivable (Table 0) and all active fields
+  5 fields activated
+@ OPEN Customer_Credit_Limit SECONDARY
+  2 fields activated
+@ JOIN PRIMARY PKEY CustomerNo FIELDS ALL SKEY CustomerNo WITH Credit_max TO "D:\M. Sabbit Qolbi_12030122130099\Realsa Export\Review Piutang Customer" OPEN PRESORT SECSORT
+Presorting Primary data file.
+Presorting Secondary data file.
+  36 records produced
+  0 PRIMARY records unmatched and written with nulls
+  Extraction to Table D:\M. Sabbit Qolbi_12030122130099\Realsa Export\Review Piutang Customer.fil is complete
+@ OPEN Review_Piutang_Customer
+Closing Table Piutang_Per_Customer (Table 0) and all active fields
+  6 fields activated
+@ OPEN Piutang_Per_Customer
+Closing Table Review_Piutang_Customer (Table 0) and all active fields
+  5 fields activated
+@ OPEN Review_Piutang_Customer
+Closing Table Piutang_Per_Customer (Table 0) and all active fields
+  6 fields activated
+@ OPEN Customer_Credit_Limit
+Closing Table Customer_Credit_Limit (Secondary) and all active fields
+@ CLOSE SECONDARY
+Closing Table Review_Piutang_Customer (Table 0) and all active fields
+  2 fields activated
+@ OPEN Review_Piutang_Customer
+Closing Table Customer_Credit_Limit (Table 0) and all active fields
+  6 fields activated
+@ OPEN Piutang_Per_Customer
+Closing Table Review_Piutang_Customer (Table 0) and all active fields
+  5 fields activated
+@ OPEN Review_Piutang_Customer
+Closing Table Piutang_Per_Customer (Table 0) and all active fields
+  6 fields activated
+@ OPEN Piutang_Per_Customer
+Closing Table Review_Piutang_Customer (Table 0) and all active fields
+  5 fields activated
+@ OPEN Review_Piutang_Customer
+Closing Table Piutang_Per_Customer (Table 0) and all active fields
+  6 fields activated
+@ OPEN Piutang_Per_Customer
+Closing Table Review_Piutang_Customer (Table 0) and all active fields
+  5 fields activated
+@ OPEN Review_Piutang_Customer
+Closing Table Piutang_Per_Customer (Table 0) and all active fields
+  6 fields activated
+@ OPEN Review_Piutang_Customer
+Closing Table Review_Piutang_Customer (Table 0) and all active fields
+  6 fields activated
+@ CLOSE
+Closing Table Review_Piutang_Customer (Table 0) and all active fields
+@ DELETE FORMAT Review_Piutang_Customer
+Data file 'Realsa Export\Review Piutang Customer.fil' deleted.
+Format 'Review_Piutang_Customer' deleted.
+View 'Review_Piutang_Customer' deleted.
+@ OPEN otorisasi_cash_3
+  7 fields activated
+@ OPEN Piutang_Per_Customer
+Closing Table otorisasi_cash_3 (Table 0) and all active fields
+  5 fields activated
+@ OPEN Customer_Credit_Limit SECONDARY
+  2 fields activated
+@ JOIN PRIMARY PKEY CustomerNo FIELDS CustomerNo Count COUNT_PERCENTAGE FIELD_PERCENTAGE Amount SKEY CustomerNo WITH ALL TO "D:\M. Sabbit Qolbi_12030122130099\Realsa FIL\Review Piutang Customer" OPEN PRESORT SECSORT
+Field 'CustomerNo' renamed 'CustomerNo2' to remove name conflict
+Presorting Primary data file.
+Presorting Secondary data file.
+  36 records produced
+  0 PRIMARY records unmatched and written with nulls
+  Extraction to Table D:\M. Sabbit Qolbi_12030122130099\Realsa FIL\Review Piutang Customer.fil is complete
+@ OPEN Review_Piutang_Customer
+Closing Table Piutang_Per_Customer (Table 0) and all active fields
+  7 fields activated
+@ OPEN Piutang_Per_Customer
+Closing Table Review_Piutang_Customer (Table 0) and all active fields
+  5 fields activated
+@ OPEN Review_Piutang_Customer
+Closing Table Piutang_Per_Customer (Table 0) and all active fields
+  7 fields activated
+@ OPEN Piutang_Per_Customer
+Closing Table Review_Piutang_Customer (Table 0) and all active fields
+  5 fields activated
+@ EXPORT EXCEL TO "D:\M. Sabbit Qolbi_12030122130099\Realsa Export\Piutang Per Customer" TABLE Piutang_Per_Customer FIELDS ALL
+  36 records produced
+  Output to D:\M. Sabbit Qolbi_12030122130099\Realsa Export\Piutang Per Customer.xlsx is done
+@ OPEN Review_Piutang_Customer
+Closing Table Piutang_Per_Customer (Table 0) and all active fields
+  7 fields activated
+@ EXPORT EXCEL TO "D:\M. Sabbit Qolbi_12030122130099\Realsa Export\Review_Piutang_Customer" TABLE Review_Piutang_Customer FIELDS ALL
+  36 records produced
+  Output to D:\M. Sabbit Qolbi_12030122130099\Realsa Export\Review_Piutang_Customer.xlsx is done
+@ OPEN Review_Piutang_Customer
+Closing Table Review_Piutang_Customer (Table 0) and all active fields
+  8 fields activated
+@ CLOSE
+Closing Table Review_Piutang_Customer (Table 0) and all active fields
+@ CLOSE SECONDARY
+Closing Table Customer_Credit_Limit (Secondary) and all active fields
+@ DELETE FORMAT Review_Piutang_Customer
+Data file 'Realsa FIL\Review Piutang Customer.fil' deleted.
+Format 'Review_Piutang_Customer' deleted.
+View 'Review_Piutang_Customer' deleted.
+@ OPEN Piutang_Per_Customer
+  5 fields activated
+@ OPEN Customer_Credit_Limit SECONDARY
+  2 fields activated
+@ JOIN PRIMARY PKEY CustomerNo FIELDS ALL SKEY CustomerNo WITH Credit_max TO "D:\M. Sabbit Qolbi_12030122130099\Realsa FIL\Review Piutang" OPEN PRESORT SECSORT
+Presorting Primary data file.
+Presorting Secondary data file.
+  36 records produced
+  0 PRIMARY records unmatched and written with nulls
+  Extraction to Table D:\M. Sabbit Qolbi_12030122130099\Realsa FIL\Review Piutang.fil is complete
+@ OPEN Review_Piutang
+Closing Table Piutang_Per_Customer (Table 0) and all active fields
+  6 fields activated
+@ EXPORT EXCEL TO "Review_Piutang" TABLE Review_Piutang FIELDS ALL
+  36 records produced
+  Output to D:\M. Sabbit Qolbi_12030122130099\Review_Piutang.xlsx is done
+@ CLOSE
+Closing Table Review_Piutang (Table 0) and all active fields
+@ OPEN Customer_Credit_Limit
+Closing Table Customer_Credit_Limit (Secondary) and all active fields
+@ CLOSE SECONDARY
+  2 fields activated
+@ OPEN otorisasi_cash_1
+Closing Table Customer_Credit_Limit (Table 0) and all active fields
+  7 fields activated
+@ OPEN Review_Piutang
+Closing Table otorisasi_cash_1 (Table 0) and all active fields
+  7 fields activated
+@ OPEN Review_Piutang
+Closing Table Review_Piutang (Table 0) and all active fields
+  7 fields activated
+@ TOTAL FIELDS Amount
+<<< Table Data:Review_PiutangTOTAL >>>
+Field NameTotal
+
+Amount200,127,050
+
+<<< Table End >>>
+@ OPEN AccountsReceivable
+Closing Table Review_Piutang (Table 0) and all active fields
+  4 fields activated
+@ OPEN AccountsReceivable
+Closing Table AccountsReceivable (Table 0) and all active fields
+  4 fields activated
+@ DEFINE FIELD piutang_minus COMPUTED Amount < 0
+@ SET FILTER TO piutang_minus
+@ TOTAL FIELDS Amount
+<<< Table Data:AccountsReceivableTOTALpiutang_minus >>>
+Field NameTotal
+
+Amount-3,238,500
+
+<<< Table End >>>
+  4 of 299 matched the Filter: piutang_minus
+@ CLOSE
+Closing Table AccountsReceivable (Table 0) and all active fields
+@ OPEN AccountsReceivable
+  5 fields activated
+@ OPEN AccountsReceivable
+Closing Table AccountsReceivable (Table 0) and all active fields
+  5 fields activated
+@ SET FILTER TO piutang_minus
+@ CLOSE
+Closing Table AccountsReceivable (Table 0) and all active fields
+@ OPEN AccountsReceivable
+  5 fields activated
+@ OPEN AccountsReceivable
+Closing Table AccountsReceivable (Table 0) and all active fields
+  5 fields activated
+@ SET FILTER TO piutang_minus
+@ SET FILTER TO Amount < 0
+@ CLOSE
+Closing Table AccountsReceivable (Table 0) and all active fields
+@ OPEN Clasify_Status_Control
+  5 fields activated
+@ OPEN AccountsReceivable
+Closing Table Clasify_Status_Control (Table 0) and all active fields
+  5 fields activated
+@ OPEN AccountsReceivable
+Closing Table AccountsReceivable (Table 0) and all active fields
+  5 fields activated
+@ SET FILTER TO piutang_minus
+@ SET FILTER
+@ SET FILTER TO Amount < 0
+@ CLOSE
+Closing Table AccountsReceivable (Table 0) and all active fields
+@ OPEN AccountsReceivable
+  5 fields activated
+@ OPEN AccountsReceivable
+Closing Table AccountsReceivable (Table 0) and all active fields
+  5 fields activated
+@ SET FILTER TO piutang_minus
+@ SET FILTER
+@ OPEN AccountsReceivable
+Closing Table AccountsReceivable (Table 0) and all active fields
+  5 fields activated
+@ OPEN AccountsReceivable
+Closing Table AccountsReceivable (Table 0) and all active fields
+  5 fields activated
+@ SET FILTER TO Amount < 0
+@ OPEN Customer_Credit_Limit
+Closing Table AccountsReceivable (Table 0) and all active fields
+  2 fields activated
+@ OPEN Customer_Credit_Limit
+Closing Table Customer_Credit_Limit (Table 0) and all active fields
+  2 fields activated
+@ OPEN Piutang_Per_Customer
+Closing Table Customer_Credit_Limit (Table 0) and all active fields
+  5 fields activated
+@ OPEN AccountsReceivable
+Closing Table Piutang_Per_Customer (Table 0) and all active fields
+  5 fields activated
+@ OPEN Piutang_Per_Customer
+Closing Table AccountsReceivable (Table 0) and all active fields
+  5 fields activated
+@ OPEN Customer_Credit_Limit
+Closing Table Piutang_Per_Customer (Table 0) and all active fields
+  2 fields activated
+@ OPEN Review_Piutang
+Closing Table Customer_Credit_Limit (Table 0) and all active fields
+  7 fields activated
+@ OPEN AccountsReceivable
+Closing Table Review_Piutang (Table 0) and all active fields
+  5 fields activated
+@ AGE ON DueDate CUTOFF 20251231 INTERVAL 0,31,61,91,121,151,181,10000 ACCUMULATE Amount
+
+  <<< AGE over 0-> 10,000 >>>
+  >>> Minimum encountered was 1,430
+  >>> Maximum encountered was 1,786
+<<< Table Data:AccountsReceivableAGEDueDate!20251231 >>>
+Page ...   1                                         22-May-2025  09:01:13
+Produced with Arbutus Analyzer by: Universitas Diponegoro, LabAkt10
+
+DueDate   CountPercent of CountPercent of Field      Amount
+
+0 -> 30                            0  0.00%  0.00%
+31 -> 60                           0  0.00%  0.00%
+61 -> 90                           0  0.00%  0.00%
+91 -> 120                          0  0.00%  0.00%
+121 -> 150                         0  0.00%  0.00%
+151 -> 180                         0  0.00%  0.00%
+181 -> 10,000                    299100.00%100.00%200,127,050
+
+                                 299100.00%100.00%200,127,050
+
+<<< Table End >>>
+@ AGE ON  DueDate CUTOFF 20241231 INTERVAL 0,31,61,91,121,151,181,10000 ACCUMULATE Amount
+
+  <<< AGE over 0-> 10,000 >>>
+  >>> Minimum encountered was 1,065
+  >>> Maximum encountered was 1,421
+<<< Table Data:AccountsReceivableAGEDueDate!20241231 >>>
+Page ...   1                                         22-May-2025  09:04:34
+Produced with Arbutus Analyzer by: Universitas Diponegoro, LabAkt10
+
+DueDate   CountPercent of CountPercent of Field      Amount
+
+0 -> 30                            0  0.00%  0.00%
+31 -> 60                           0  0.00%  0.00%
+61 -> 90                           0  0.00%  0.00%
+91 -> 120                          0  0.00%  0.00%
+121 -> 150                         0  0.00%  0.00%
+151 -> 180                         0  0.00%  0.00%
+181 -> 10,000                    299100.00%100.00%200,127,050
+
+                                 299100.00%100.00%200,127,050
+
+<<< Table End >>>
+@ AGE ON DueDate CUTOFF 20211231 INTERVAL 0,31,61,91,121,151,181,10000 ACCUMULATE Amount
+
+  <<< AGE over 0-> 10,000 >>>
+  >>> Minimum encountered was -31
+  >>> Maximum encountered was 325
+<<< Table Data:AccountsReceivableAGEDueDate!20211231 >>>
+Page ...   1                                         22-May-2025  09:06:01
+Produced with Arbutus Analyzer by: Universitas Diponegoro, LabAkt10
+
+DueDate   CountPercent of CountPercent of Field      Amount
+
+-31 -> -1                        123 41.14% 40.25%80,556,950
+0 -> 30                          167 55.85% 56.18%112,432,600
+31 -> 60                           6  2.01%  2.31%4,614,900
+61 -> 90                           0  0.00%  0.00%
+91 -> 120                          0  0.00%  0.00%
+121 -> 150                         0  0.00%  0.00%
+151 -> 180                         1  0.33%  0.48%965,000
+181 -> 10,000                      2  0.67%  0.78%1,557,600
+
+                                 299100.00%100.00%200,127,050
+
+<<< Table End >>>
+@ OPEN AccountsReceivable
+Closing Table AccountsReceivable (Table 0) and all active fields
+  5 fields activated
+@ SET FILTER TO age(DueDate,"20211231")>=31  AND age(DueDate,"20211231")<=60
+@ SET FILTER TO age(DueDate,"20211231")>=151  AND age(DueDate,"20211231")<=180
+@ SET FILTER TO age(DueDate,"20211231")>=181  AND age(DueDate,"20211231")<=10000
+@ OPEN Cash_GL
+Closing Table AccountsReceivable (Table 0) and all active fields
+  8 fields activated
+@ OPEN AccountsReceivable
+Closing Table Cash_GL (Table 0) and all active fields
+  5 fields activated
+@ AGE ON DueDate CUTOFF 20211231 INTERVAL 0,31,61,91,121,151,181,10000 ACCUMULATE Amount
+
+  <<< AGE over 0-> 10,000 >>>
+  >>> Minimum encountered was -31
+  >>> Maximum encountered was 325
+<<< Table Data:AccountsReceivableAGEDueDate!20211231 >>>
+Page ...   1                                         22-May-2025  09:08:49
+Produced with Arbutus Analyzer by: Universitas Diponegoro, LabAkt10
+
+DueDate   CountPercent of CountPercent of Field      Amount
+
+-31 -> -1                        123 41.14% 40.25%80,556,950
+0 -> 30                          167 55.85% 56.18%112,432,600
+31 -> 60                           6  2.01%  2.31%4,614,900
+61 -> 90                           0  0.00%  0.00%
+91 -> 120                          0  0.00%  0.00%
+121 -> 150                         0  0.00%  0.00%
+151 -> 180                         1  0.33%  0.48%965,000
+181 -> 10,000                      2  0.67%  0.78%1,557,600
+
+                                 299100.00%100.00%200,127,050
+
+<<< Table End >>>
+@ CLOSE
+Closing Table AccountsReceivable (Table 0) and all active fields
+@ QUIT
+Log File D:\M. Sabbit Qolbi_12030122130099\M. Sabbit Qolbi_12030122130099.log Opened at 09:10:37 on 22-May-2025
+@ OPEN AccountsReceivable
+  5 fields activated
+@ OPEN AccountsReceivable
+Closing Table AccountsReceivable (Table 0) and all active fields
+  5 fields activated
+@ OPEN Review_Piutang
+Closing Table AccountsReceivable (Table 0) and all active fields
+  7 fields activated
+@ QUIT
+Closing Table Review_Piutang (Table 0) and all active fields
+Log File C:\Users\USer\Documents\OneDrive_1_5-28-2025\Arbutus\M. Sabbit Qolbi_12030122130099.log Opened at 12:30:46 on 05/28/2025
+@ OPEN Review_Piutang
+12:30:46 - 05/28/2025
+@ OPEN Piutang_Per_Customer
+12:31:26 - 05/28/2025
+@ OPEN Review_Piutang
+12:31:33 - 05/28/2025
+@ OPEN otorisasi_cash_3
+12:31:36 - 05/28/2025
+@ OPEN otorisasi_cash_2
+12:31:41 - 05/28/2025
+@ OPEN Clasify_Status_Control
+12:31:45 - 05/28/2025
+  5 fields activated
+@ OPEN Clasify_Status_Control
+12:31:45 - 05/28/2025
+Closing Table Clasify_Status_Control (Table 0) and all active fields
+  5 fields activated
+@ OPEN Customer_Credit_Limit
+12:31:48 - 05/28/2025
+Log File C:\Users\USer\Documents\Arbutus\M. Sabbit Qolbi\M. Sabbit Qolbi_12030122130099.log Opened at 12:33:38 on 05/28/2025
+@ OPEN Review_Piutang
+12:33:41 - 05/28/2025
+@ OPEN Customer_Credit_Limit
+12:34:54 - 05/28/2025
+Refreshing Customer_Credit_Limit
+Invalid [REFRESH]: OPENEXCEL FILE "Realsa bahan\customer credit limit.xlsx" TABLE "Sheet1" SERVER "LOCAL" FLAT "Realsa FIL\Customer Credit Limit.FIL"
+  @ OPEN Clasify_Status_Control
+12:35:52 - 05/28/2025
+  5 fields activated
+@ OPEN Clasify_Status_Control
+12:35:53 - 05/28/2025
+Closing Table Clasify_Status_Control (Table 0) and all active fields
+  5 fields activated
+@ OPEN Review_Piutang
+12:38:01 - 05/28/2025
+Closing Table Clasify_Status_Control (Table 0) and all active fields
+  7 fields activated
+@ OPEN Review_Piutang
+12:38:02 - 05/28/2025
+Closing Table Review_Piutang (Table 0) and all active fields
+  7 fields activated
+@ OPEN Piutang_Per_Customer
+14:12:27 - 05/28/2025
+Closing Table Review_Piutang (Table 0) and all active fields
+  5 fields activated
+@ OPEN Review_Piutang
+14:13:37 - 05/28/2025
+Closing Table Piutang_Per_Customer (Table 0) and all active fields
+  7 fields activated
+@ OPEN Piutang_Per_Customer
+14:13:41 - 05/28/2025
+Closing Table Review_Piutang (Table 0) and all active fields
+  5 fields activated
+@ SET FILTER TO Amount < 0
+14:13:59 - 05/28/2025
+@ OPEN Customer_Credit_Limit
+14:14:03 - 05/28/2025
+Closing Table Piutang_Per_Customer (Table 0) and all active fields
+  2 fields activated
+@ OPEN AccountsReceivable
+14:14:06 - 05/28/2025
+Closing Table Customer_Credit_Limit (Table 0) and all active fields
+  5 fields activated
+@ OPEN AccountsReceivable
+14:14:06 - 05/28/2025
+Closing Table AccountsReceivable (Table 0) and all active fields
+  5 fields activated
+@ SET FILTER TO piutang_minus
+14:14:15 - 05/28/2025
+@ IMPORT OPENEXCEL TO Inventory FILE "C:\Users\USer\Documents\Arbutus\M. Sabbit Qolbi\Realsa Data\Inventory.xlsx" TABLE "Inventory" SERVER "LOCAL" FLAT "C:\Users\USer\Documents\Arbutus\M. Sabbit Qolbi\Realsa FIL\Inventory.FIL" FIELDS "Cost Date","Product Description","Product Number","Quantitiy","Cost per unit","Inventory Cost" END 
+14:24:19 - 05/28/2025
+@ OPEN Inventory TABLE 1
+14:24:19 - 05/28/2025
+  6 fields activated
+@ VERIFY FIELDS ALL ERRORLIMIT 20
+14:24:33 - 05/28/2025
+<<< Table Data:InventoryVERIFY >>>
+RecordFieldTypeContents (text)Contents (hex)
+
+13Cost_DateDATETIME          20 20 20 20 20 20 20 20 20 20 
+
+<<< Table End >>>
+  1 data validity errors detected
+@ LOCATE RECORD 13
+14:24:45 - 05/28/2025
+Located record 13
+@ OPEN Inventory
+14:24:53 - 05/28/2025
+Closing Table AccountsReceivable (Table 0) and all active fields
+  6 fields activated
+@ SEQUENCE ON Product_Number ERRORLIMIT 20
+14:25:27 - 05/28/2025
+<<< Table Data:InventorySEQUENCE >>>
+RecordProduct_Number
+
+3070104177
+5070104657
+6070104327
+8030414313
+9030414283
+10030412553
+14030364163
+15030321663
+20030030323
+22030303413
+23030303403
+24030303343
+26030309373
+27030302903
+28030302303
+30090506331
+31090501541
+33090501051
+37090507811
+38090504761
+
+<<< Table End >>>
+Maximum error limit reached
+  20 data sequence errors detected
+@ SEQUENCE ON Cost_Date ERRORLIMIT 20
+14:25:44 - 05/28/2025
+<<< Table Data:InventorySEQUENCE >>>
+RecordCost_Date
+
+809/28/2021  
+13            
+2909/28/2021  
+3008/08/2021  
+3908/08/2021  
+4501/07/2021  
+5502/07/2021  
+6109/13/2021  
+6206/10/2021  
+6710/04/2021  
+6901/08/2021  
+7501/07/2021  
+8606/28/2021  
+9606/13/2021  
+10502/02/2021  
+11801/29/2021  
+12101/12/2021  
+12510/18/2021  
+12906/04/2021  
+13409/07/2021  
+
+<<< Table End >>>
+Maximum error limit reached
+  20 data sequence errors detected
+@ GAPS ON Product_Number PRESORT
+14:26:08 - 05/28/2025
+Presorting Primary data file.
+<<< Table Data:InventoryGAPS >>>
+Gap Start orGap EndNumber of
+Missing ItemMissing Items
+
+1010271110102839129
+101028411011903916199
+101190411013441915379
+1013442110135059639
+101350611015514920089
+10155151101551599
+10155161101551699
+101551711020721952049
+102072211022661919399
+102266211031088984269
+1031089110311799909
+1031180110311989189
+1031199110551339239349
+105513411063113979799
+106311411063118949
+1063119110803759172569
+108037612390371113099951
+239037132394637142659
+239463732397304126669
+2397304324100311127269
+24100313241043113999
+24104313241065112199
+24106513241086112099
+24108613241121613549
+24112163241213319169
+24121333241287117379
+241287132412881199
+2412881324128931119
+24128933241305711639
+24130573241331112539
+24133113241393716259
+2413937324140031659
+24140033241448114779
+241448132418843143619
+24188433241952616829
+24195263300303225835060
+3003032430302302271979
+3030230430302902599
+3030290430303342439
+303033443030340259
+30303404303034129
+30303414303093725959
+303093743032166212289
+303216643032168219
+3032168430322302619
+30322304303248022499
+303248043032488279
+303248843036416239279
+303641643041255248389
+3041255430412752199
+3041275430412902149
+30412904304142821379
+304142843041431229
+3041431430934422520109
+30934424342550023320579
+34255004402200735965070
+40220075402249834909
+402249854022501329
+4022501540225933919
+4022593540226053119
+40226055402321936139
+40232195402402838089
+4024028540240663379
+4024066540240883219
+4024088540241313429
+4024131540241753439
+40241755402432231469
+40243225402470333809
+402470354027032323289
+402703254027035329
+40270355402760535699
+40276055402771531099
+402771555220451411927360
+52204516522045249
+52204526522088044279
+52208806522105441739
+5221054652484404273859
+52484406524844149
+52484416524844249
+52484426524844349
+524844365250400419569
+525040065253015426149
+5253015652720304190149
+5272030652720614309
+527206165277001449399
+52770016601003057330290
+60100307601003159
+601003176010033519
+601003376010035519
+60100357601020651709
+601020676010208519
+60102087601020959
+60102097601021059
+60102107601021159
+601021176011227510159
+601122776011229519
+601122976011235559
+601123576020030587949
+602003076021706516759
+60217067602214954429
+60221497602215059
+6022150760221675169
+60221677701041769882500
+7010417870104326149
+701043287010434619
+701043487010437629
+701043787010439619
+7010439870104656259
+701046587010467619
+70104678801008179996140
+8010081980101017199
+80101019801026171599
+80102619801026279
+8010262980102917289
+80102919801062173299
+801062198012343717219
+8012343980123937499
+801239398012396729
+8012396980124517549
+80124519801260071489
+801260098012605749
+8012605980126307249
+8012630980435437309129
+804354398051277777339
+8051277980935297422519
+8093529980935427129
+80935429809387473319
+8093874980938997249
+80938999900100109071012
+900100129006959059579
+900695929008100011409
+9008100290501050420049
+9050105290501540489
+90501542905015509
+90501552905040602509
+9050406290504760699
+90504762905063301569
+90506332905078101479
+905078129050784029
+90507842905078509
+9050785290508190339
+90508192905095601369
+9050956290509930369
+905099329050998049
+905099829058407174090
+90584073905853211249
+905853239059991114589
+905999139066961069698
+90669612937884103118799
+9378841213030560236517191
+13030560418012215749816554
+
+<<< Table End >>>
+  151 gaps detected
+@ GAPS ON Cost_Date PRESORT
+14:28:12 - 05/28/2025
+Presorting Primary data file.
+<<< Table Data:InventoryGAPS >>>
+Gap Start orGap EndNumber of
+Missing ItemMissing Items
+
+01/02/190001/06/202144201
+01/09/202101/11/20213
+01/13/202101/28/202116
+01/31/20211
+02/03/202102/06/20214
+02/08/202103/07/202128
+03/09/202103/27/202119
+03/29/202104/07/202110
+04/09/202104/15/20217
+04/17/202105/07/202121
+05/09/202106/03/202126
+06/05/202106/09/20215
+06/11/202106/12/20212
+06/14/202106/27/202114
+06/29/202107/29/202131
+07/31/202108/06/20217
+08/09/202108/12/20214
+08/14/202109/06/202124
+09/10/202109/11/20212
+09/14/202109/17/20214
+09/19/202109/27/20219
+10/02/202110/03/20212
+10/05/202110/06/20212
+10/09/20211
+10/11/202110/17/20217
+10/19/202110/20/20212
+10/22/202110/29/20218
+10/31/20211
+11/02/202111/08/20217
+11/10/202111/16/20217
+11/18/202111/28/202111
+11/30/202112/07/20218
+12/09/202112/17/20219
+12/19/202112/28/202110
+
+<<< Table End >>>
+  34 gaps detected
+@ DUPLICATES ON Product_Number PRESORT
+14:28:38 - 05/28/2025
+Presorting Primary data file.
+  0 duplicates detected
+@ TOTAL FIELDS Inventory_Cost
+14:39:56 - 05/28/2025
+<<< Table Data:InventoryTOTAL >>>
+Field NameTotal
+
+Inventory_Cost320,557,500
+
+<<< Table End >>>
+@ STATISTICS ON Inventory_Cost NUMBER 5
+14:49:13 - 05/28/2025
+<<< Table Data:InventorySTATISTICSInventory_Cost >>>
+Field: Inventory_CostNumberTotalAverage
+
+Positive149320,757,5002,152,735
+Zeros1
+Negative2-200,000-100,000
+Totals152320,557,5002,108,931
+Abs Value320,957,500
+Range5,160,000
+
+<<< Table End >>>
+<<< Table Data:InventorySORTInventory_Cost:Inventory_Cost >>>
+HighestLowest
+
+5,060,000-100,000
+4,950,000-100,000
+4,950,0000
+4,950,000100,000
+4,900,000150,000
+
+<<< Table End >>>
+@ SET FILTER TO Inventory_Cost<0
+14:49:54 - 05/28/2025
+@ IMPORT OPENEXCEL TO Fixed_Asset FILE "C:\Users\USer\Documents\Arbutus\M. Sabbit Qolbi\Realsa Data\Arbutus data Fixed Asset.xlsx" TABLE "Sheet2" SERVER "LOCAL" FLAT "C:\Users\USer\Documents\Arbutus\M. Sabbit Qolbi\Realsa FIL\Fixed Asset.FIL" FIELDS "No.","Nama dan spesifikasi","Jenis Aset","Unit","Tanggal Perolehan","Harga Perolehan","Tarif Penyusutan","Akumulasi 2020","Nilai Buku2020","Penyusutan 2021","Akumulasi 2021","Nilai Buku2021" END 
+15:09:02 - 05/28/2025
+@ OPEN Fixed_Asset TABLE 2
+15:09:03 - 05/28/2025
+  12 fields activated
+@ CROSSTAB ON Nama_dan_spesifikasi COLUMNS Jenis_Aset ACCUMULATE Harga_Perolehan
+15:15:11 - 05/28/2025
+<<< Table Data:Fixed_AssetCROSSTABNama_dan_spesifikasi!Jenis_Aset >>>
+Page ...   1                                         05/28/2025  15:15:11
+Produced with Arbutus Analyzer by: Universitas Dipoengoro, 
+
+Nama_dan_spesifikasi          | Harga_PerolehanHarga_PerolehanHarga_PerolehanHarga_PerolehanHarga_PerolehanHarga_Perolehan
+                                Jenis_AsetJenis_AsetJenis_AsetJenis_AsetJenis_AsetNama_dan_spesifikasi
+                                AutomotiveBuildingLandMach n EquipOfficeFurnitureTotal
+
+Filling Kabinet               | 60000006000000
+Gedung                        | 375000000375000000
+Honda Win                     | 1219500012195000
+Kursi                         | 24000002400000
+Laptop                        | 1375000013750000
+Meja Panjang                  | 52640005264000
+Mesin Pemotong Kertas         | 400000400000
+Mesin Pengemas                | 1500700015007000
+Mesin Pengolah gula Aren Cair | 8000000080000000
+Mixer Gula                    | 6550000065500000
+Mobil Pickup                  | 113555000113555000
+Perangkat Komputer            | 1459930014599300
+Printer                       | 20750002075000
+Rak Buku                      | 26370002637000
+TV 50 Inch                    | 55993005599300
+Tanah                         | 250000000250000000
+Timbangan Digital             | 50000005000000
+UPS                           | 31254003125400
+
+Total | 125,750,000375,000,000250,000,000165,507,00055,850,000972,107,000
+
+<<< Table End >>>
+  18 records produced
+@ CROSSTAB ON Nama_dan_spesifikasi COLUMNS Jenis_Aset ACCUMULATE Akumulasi_2020
+15:16:01 - 05/28/2025
+<<< Table Data:Fixed_AssetCROSSTABNama_dan_spesifikasi!Jenis_Aset >>>
+Page ...   1                                         05/28/2025  15:16:01
+Produced with Arbutus Analyzer by: Universitas Dipoengoro, 
+
+Nama_dan_spesifikasi          | Akumulasi_2020Akumulasi_2020Akumulasi_2020Akumulasi_2020Akumulasi_2020Akumulasi_2020
+                                Jenis_AsetJenis_AsetJenis_AsetJenis_AsetJenis_AsetNama_dan_spesifikasi
+                                AutomotiveBuildingLandMach n EquipOfficeFurnitureTotal
+
+Filling Kabinet               | 52500005250000
+Gedung                        | 5550000055500000
+Honda Win                     | 1219499912194999
+Kursi                         | 18000001800000
+Laptop                        | 49628324962832
+Meja Panjang                  | 39480003948000
+Mesin Pemotong Kertas         | 300000300000
+Mesin Pengemas                | 00
+Mesin Pengolah gula Aren Cair | 1000000010000000
+Mixer Gula                    | 1546160015461600
+Mobil Pickup                  | 30848003084800
+Perangkat Komputer            | 18249131824913
+Printer                       | 15562501556250
+Rak Buku                      | 19777501977750
+TV 50 Inch                    | 00
+Tanah                         | 00
+Timbangan Digital             | 625000625000
+UPS                           | 21383562138356
+
+Total | 15,279,79955,500,000 026,086,60023,758,101120,624,500
+
+<<< Table End >>>
+  18 records produced
+@ CROSSTAB ON Nama_dan_spesifikasi COLUMNS Jenis_Aset ACCUMULATE Akumulasi_2021
+15:16:45 - 05/28/2025
+<<< Table Data:Fixed_AssetCROSSTABNama_dan_spesifikasi!Jenis_Aset >>>
+Page ...   1                                         05/28/2025  15:16:45
+Produced with Arbutus Analyzer by: Universitas Dipoengoro, 
+
+Nama_dan_spesifikasi          | Akumulasi_2021Akumulasi_2021Akumulasi_2021Akumulasi_2021Akumulasi_2021Akumulasi_2021
+                                Jenis_AsetJenis_AsetJenis_AsetJenis_AsetJenis_AsetNama_dan_spesifikasi
+                                AutomotiveBuildingLandMach n EquipOfficeFurnitureTotal
+
+Filling Kabinet               | 5999999.05999999.0
+Gedung                        | 74625000.074625000.0
+Honda Win                     | 12194999.012194999.0
+Kursi                         | 2399999.02399999.0
+Laptop                        | 9347738.09347738.0
+Meja Panjang                  | 5263999.05263999.0
+Mesin Pemotong Kertas         | 399999.0399999.0
+Mesin Pengemas                | 1875875.01875875.0
+Mesin Pengolah gula Aren Cair | 16000000.016000000.0
+Mixer Gula                    | 19858925.019858925.0
+Mobil Pickup                  | 9570400.09570400.0
+Perangkat Komputer            | 3649825.53649825.5
+Printer                       | 2074999.02074999.0
+Rak Buku                      | 2636999.02636999.0
+TV 50 Inch                    | 699912.5699912.5
+Tanah                         | 0.00.0
+Timbangan Digital             | 1250000.01250000.0
+UPS                           | 2529031.02529031.0
+
+Total | 21,765,399.074,625,000.00.038,984,800.035,002,501.0170,377,700.0
+
+<<< Table End >>>
+  18 records produced
+'Verifikasi_Penyusutan_2021' is undefined
+'Verifikasi_Penyusutan_2021' is undefined
+@ DELETE FIELD Verifikasi_Penyusutan_2021 OK
+15:41:20 - 05/28/2025
+@ DEFINE FIELD Verifikasi_Penyusutan_2021 COMPUTED 
+15:41:20 - 05/28/2025
+@ AS "Verifikasi Penyusutan 2021" 
+@ "habis manfaat" IF Penyusutan_2021 = Nilai_Buku2020 - 1
+@ "benar" IF Penyusutan_2021 = Harga_Perolehan * Tarif_Penyusutan
+@ "salah"
+'Verifikasi_Penyusutan_2021' is undefined
+@ DELETE FIELD Verifikasi_Penyusutan_2021 OK
+15:42:00 - 05/28/2025
+@ DEFINE FIELD Verifikasi_Penyusutan_2021 COMPUTED 
+15:42:00 - 05/28/2025
+@ AS "Verifikasi Penyusutan 2021" 
+@ "habis manfaat" IF Penyusutan_2021 = Nilai_Buku2020 - 1
+@ "benar" IF Penyusutan_2021 = Harga_Perolehan * Tarif_Penyusutan
+@ "salah"
+@ DELETE FIELD Verifikasi_Penyusutan_2021 OK
+15:42:16 - 05/28/2025
+Field 'Verifikasi_Penyusutan_2021' deleted.
+'Verifikasi_Penyusutan_2021' is undefined
+'Verifikasi_Penyusutan_2021' is undefined
+@ DELETE FIELD Verifikasi_Penyusutan_2021 OK
+15:45:11 - 05/28/2025
+@ DEFINE FIELD Verifikasi_Penyusutan_2021 COMPUTED 
+15:45:11 - 05/28/2025
+@ AS "Verifikasi Penyusutan 2021" 
+@ "habis manfaat" IF Penyusutan_2021 = Nilai_Buku2020 - 1
+@ "benar" IF Penyusutan_2021 = Harga_Perolehan * Tarif_Penyusutan
+@ "salah"
+@ DELETE FIELD Verifikasi_Penyusutan_2021 OK
+15:46:39 - 05/28/2025
+Field 'Verifikasi_Penyusutan_2021' deleted.
+Closing Table Fixed_Asset (Table 2) and all active fields
+Closing Table Inventory (Table 0) and all active fields
+Closing Table Inventory (Table 1) and all active fields
+Log File C:\Users\USer\Documents\Arbutus\M. Sabbit Qolbi\M. Sabbit Qolbi_12030122130099.log Opened at 15:49:31 on 05/28/2025
+@ OPEN Fixed_Asset
+15:49:31 - 05/28/2025
+  12 fields activated
+'Verifikasi_Penyusutan_2021' is undefined
+@ DELETE FIELD Verifikasi_Penyusutan_2021 OK
+15:55:35 - 05/28/2025
+@ DEFINE FIELD Verifikasi_Penyusutan_2021 COMPUTED 
+15:55:35 - 05/28/2025
+@ AS "Verifikasi Penyusutan 2021" 
+@ "benar" IF Penyusutan_2021 = Harga_Perolehan * Tarif_Penyusutan
+@ "habis manfaat" IF Penyusutan_2021 = Nilai_Buku2020 - 1
+@ "benar" IF Penyusutan_2021 > Nilai_Buku2020 - 0.5
+@ "salah"
+@ SET FILTER TO Penyusutan_2021 = Nilai_Buku2020 * Tarif_Penyusutan
+15:56:07 - 05/28/2025
+@ SET FILTER TO Penyusutan_2021 = Harga_Perolehan * Tarif_Penyusutan
+15:56:33 - 05/28/2025
+@ SET FILTER TO Penyusutan_2021 > Nilai_Buku2020 - 0.5
+15:57:37 - 05/28/2025
+@ SET FILTER
+15:58:18 - 05/28/2025
+@ DELETE FIELD Verifikasi_Penyusutan_2021 OK
+16:00:29 - 05/28/2025
+@ DEFINE FIELD Verifikasi_Penyusutan_2021 COMPUTED 
+16:00:29 - 05/28/2025
+@ AS "Verifikasi Penyusutan 2021" 
+@ "Benar" IF Penyusutan_2021 = Harga_Perolehan * Tarif_Penyusutan
+@ "Habis Manfaat" IF Penyusutan_2021 = Nilai_Buku2020 - 1
+@ "Benar" IF Penyusutan_2021 > Nilai_Buku2020 - 0.5
+@ "Salah"
+@ OPEN Fixed_Asset
+16:00:36 - 05/28/2025
+Closing Table Fixed_Asset (Table 0) and all active fields
+  13 fields activated
+@ DELETE FIELD Verifikasi_Penyusutan_2021 OK
+16:01:50 - 05/28/2025
+@ DEFINE FIELD Verifikasi_Penyusutan_2021 COMPUTED 
+16:01:50 - 05/28/2025
+@ AS "Verifikasi Penyusutan 2021" 
+@ "benar" IF Penyusutan_2021 = Harga_Perolehan * Tarif_Penyusutan
+@ "habis Manfaat" IF Penyusutan_2021 = Nilai_Buku2020 - 1
+@ "benar" IF Penyusutan_2021 > Nilai_Buku2020 - 0.5
+@ "salah"
+@ OPEN Fixed_Asset
+16:01:55 - 05/28/2025
+Closing Table Fixed_Asset (Table 0) and all active fields
+  13 fields activated
+@ EXTRACT FIELDS Nama_dan_spesifikasi Harga_Perolehan Tarif_Penyusutan Penyusutan_2021 TO "C:\Users\USer\Documents\Arbutus\M. Sabbit Qolbi\Realsa FIL\Koreksi Penyusutan 2021" OPEN IF Verifikasi_Penyusutan_2021 = "salah"
+16:12:46 - 05/28/2025
+  5 of 18 met the test: Verifikasi_Penyusutan_2021 = "salah"
+  Output to C:\Users\USer\Documents\Arbutus\M. Sabbit Qolbi\Realsa FIL\Koreksi Penyusutan 2021 is done
+  5 records produced
+@ OPEN Koreksi_Penyusutan_2021
+16:12:46 - 05/28/2025
+Closing Table Fixed_Asset (Table 0) and all active fields
+  4 fields activated
+@ OPEN Fixed_Asset
+16:12:56 - 05/28/2025
+Closing Table Koreksi_Penyusutan_2021 (Table 0) and all active fields
+  13 fields activated
+@ OPEN Fixed_Asset
+16:12:56 - 05/28/2025
+Closing Table Fixed_Asset (Table 0) and all active fields
+  13 fields activated
+@ OPEN Inventory
+16:13:16 - 05/28/2025
+Closing Table Fixed_Asset (Table 0) and all active fields
+  6 fields activated
+@ OPEN Koreksi_Penyusutan_2021
+16:13:17 - 05/28/2025
+Closing Table Inventory (Table 0) and all active fields
+  4 fields activated
+@ OPEN Koreksi_Penyusutan_2021
+16:13:17 - 05/28/2025
+Closing Table Koreksi_Penyusutan_2021 (Table 0) and all active fields
+  4 fields activated
+@ OPEN otorisasi_cash_1
+16:14:35 - 05/28/2025
+Closing Table Koreksi_Penyusutan_2021 (Table 0) and all active fields
+  7 fields activated
+@ OPEN Koreksi_Penyusutan_2021
+16:14:37 - 05/28/2025
+Closing Table otorisasi_cash_1 (Table 0) and all active fields
+  5 fields activated
+@ DEFINE FIELD koreksi COMPUTED Penyusutan_2021 - penyusutan_benar
+16:15:22 - 05/28/2025
+@ OPEN Koreksi_Penyusutan_2021
+16:15:27 - 05/28/2025
+Closing Table Koreksi_Penyusutan_2021 (Table 0) and all active fields
+  6 fields activated
+@ DELETE FIELD koreksi OK
+16:16:15 - 05/28/2025
+@ DEFINE FIELD koreksi COMPUTED penyusutan_benar - Penyusutan_2021
+16:16:15 - 05/28/2025
+@ OPEN Koreksi_Penyusutan_2021
+16:16:25 - 05/28/2025
+Closing Table Koreksi_Penyusutan_2021 (Table 0) and all active fields
+  6 fields activated
+@ OPEN Fixed_Asset
+16:17:45 - 05/28/2025
+Closing Table Koreksi_Penyusutan_2021 (Table 0) and all active fields
+  13 fields activated
+@ OPEN Fixed_Asset
+16:17:46 - 05/28/2025
+Closing Table Fixed_Asset (Table 0) and all active fields
+  13 fields activated
+@ EXPORT EXCEL TO "C:\Users\USer\Documents\Arbutus\M. Sabbit Qolbi\Realsa Export\Fixed Asset Check" TABLE Fixed_Asset FIELDS ALL
+16:18:35 - 05/28/2025
+  18 records produced
+  Output to C:\Users\USer\Documents\Arbutus\M. Sabbit Qolbi\Realsa Export\Fixed Asset Check.xlsx is done
+@ QUIT
+16:21:18 - 05/28/2025
+Closing Table Fixed_Asset (Table 0) and all active fields

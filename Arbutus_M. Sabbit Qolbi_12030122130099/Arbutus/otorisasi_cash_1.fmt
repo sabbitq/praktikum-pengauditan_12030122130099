@@ -1,0 +1,20 @@
+FILE_NAME Realsa FIL\otorisasi cash 1.fil
+~Table Imported via OpenXML Excel 08-May-2025 07:43:49
+~.08-May-2025 07:44:07 _ IMPORT OPENEXCEL TO Cash_GL FILE "Realsa bahan\Cash GL.xlsx" TABLE "Sheet1" SERVER "LOCAL" FLAT "Realsa FIL\Cash GL.FIL" 
+~.08-May-2025 07:58:06 Cash_GL EXTRACT RECORD TO "D:\M. Sabbit Qolbi_12030122130099\Realsa FIL\otorisasi cash 1" OPEN IF Between( Amount_Credit , 20000000, 50000000)
+~Input : Records:100         Control Total:0                    
+~Output: Records:69          Control Total:0                    
+[FILESIZE] 69
+[LASTVIEW] "otorisasi_cash_1"
+[SERVER] LOCAL
+[DELIMITED] 0 9 0
+[UTF8]
+[VERSION] 1
+RECORD_LENGTH 150
+Posting_Date                    DATETIME    1  10   PICTURE "yyyy-mm-dd" NATIVE [D]  
+Voucher_Number                  PRINT      11   5 0 DECIMAL '.' NATIVE [D]  
+Voucher__Description            UTF8       16  10   NATIVE [D]  
+Account_Number                  PRINT      26   3 0 DECIMAL '.' NATIVE [D]  
+Amount_Debit                    PRINT      29   9 0 DECIMAL '.' NATIVE [D]  
+Amount_Credit                   PRINT      38   9 0 DECIMAL '.' NATIVE [D]  
+Balance                         PRINT      47   9 0 DECIMAL '.' NATIVE [D]  

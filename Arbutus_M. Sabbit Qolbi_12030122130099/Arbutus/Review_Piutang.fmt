@@ -1,0 +1,27 @@
+FILE_NAME Realsa FIL\Review Piutang.fil
+~Table Imported via OpenXML Excel 22-May-2025 07:11:37
+~.22-May-2025 07:12:20 _ IMPORT OPENEXCEL TO AccountsReceivable FILE "Realsa bahan\AR.xlsx" TABLE "AccountsReceivable" SERVER "LOCAL" FLAT "Realsa FIL\AccountsReceivable.FIL" 
+~.22-May-2025 08:30:07 AccountsReceivable CLASSIFY ON CustomerNo ACCUMULATE Amount TO "D:\M. Sabbit Qolbi_12030122130099\Realsa Export\Piutang Per Customer" OPEN TOP ALL
+~:CLASSIFY:AccountsReceivable:CustomerNo
+~Input : Records:299         Control Total:0                    
+~Output: Records:36          Control Total:0                    
+~.22-May-2025 08:39:24 Piutang_Per_Customer OPEN Customer_Credit_Limit SECONDARY
+~.22-May-2025 08:39:24 Piutang_Per_Customer JOIN PRIMARY PKEY CustomerNo FIELDS ALL SKEY CustomerNo WITH Credit_max TO "D:\M. Sabbit Qolbi_12030122130099\Realsa FIL\Review Piutang" OPEN PRESORT SECSORT
+~Input : Records:36          Control Total:0                    
+~Output: Records:36          Control Total:0                    
+[FILESIZE] 36
+[LASTVIEW] "Review_Piutang"
+[SERVER] LOCAL
+[UTF8]
+[VERSION] 1
+RECORD_LENGTH 68
+CustomerNo                      UTF16       1  12    
+Count                           ARBUTUS    13  12 0 WIDTH 8  
+COUNT_PERCENTAGE                ARBUTUS    25  12 2 AS "Percent;of Count" WIDTH 8  
+FIELD_PERCENTAGE                ARBUTUS    37  12 2 AS "Percent;of Field" WIDTH 8  
+Amount                          ARBUTUS    49  12 0  
+Credit_max                      PRINT      61   8 0 DECIMAL '.'  
+Piutang_Melampaui               COMPUTED            AS "Piutang Melampaui"  
+ #C 2 9
+ "Melampaui" IF Amount > Credit_max
+ "Tidak"

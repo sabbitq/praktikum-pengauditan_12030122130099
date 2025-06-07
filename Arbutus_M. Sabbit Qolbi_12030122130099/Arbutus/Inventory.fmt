@@ -1,0 +1,15 @@
+FILE_NAME Realsa FIL\Inventory.FIL
+[FILESIZE] 152
+[LASTVIEW] "Inventory"
+[REFRESH] OPENEXCEL FILE "C:\Users\USer\Documents\Arbutus\M. Sabbit Qolbi\Realsa Data\Inventory.xlsx" TABLE "Inventory" SERVER "LOCAL" FLAT "C:\Users\USer\Documents\Arbutus\M. Sabbit Qolbi\Realsa FIL\Inventory.FIL" FIELDS "Cost Date","Product Description","Product Number","Quantitiy","Cost per unit","Inventory Cost" END
+[SERVER] LOCAL
+[DELIMITED] 0 9 0
+[UTF8]
+[VERSION] 1
+RECORD_LENGTH 135
+Cost_Date                       DATETIME    1  10   PICTURE "yyyy-mm-dd" NATIVE [D]  
+Product_Description             UTF8       11  22   NATIVE [D]  
+Product_Number                  UTF8       33   9   NATIVE [D]  
+Quantitiy                       PRINT      42   2 0 DECIMAL '.' NATIVE [D]  
+Cost_per_unit                   PRINT      44   6 0 DECIMAL '.' NATIVE [D]  
+Inventory_Cost                  PRINT      50   7 0 DECIMAL '.' NATIVE [D]  

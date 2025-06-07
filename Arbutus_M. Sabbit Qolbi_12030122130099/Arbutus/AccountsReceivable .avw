@@ -1,0 +1,8 @@
+[SKIP] 0
+[TLINES] 1
+[RLINES] 1
+[LINE] 1
+InvoiceDate           
+CustomerNo             WIDTH 11
+DueDate               
+Amount                

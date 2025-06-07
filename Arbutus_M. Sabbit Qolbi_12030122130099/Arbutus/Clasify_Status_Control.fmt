@@ -1,0 +1,18 @@
+FILE_NAME Clasify_Status Control.fil
+~Table Imported via OpenXML Excel 08-May-2025 07:43:49
+~.08-May-2025 07:44:07 _ IMPORT OPENEXCEL TO Cash_GL FILE "Realsa bahan\Cash GL.xlsx" TABLE "Sheet1" SERVER "LOCAL" FLAT "Realsa FIL\Cash GL.FIL" 
+~.22-May-2025 07:36:24 Cash_GL CLASSIFY ON Status_Control ACCUMULATE Amount_Credit TO "Clasify_Status Control" OPEN TOP ALL
+~:CLASSIFY:Cash_GL:Status_Control
+~Input : Records:100         Control Total:0                    
+~Output: Records:4           Control Total:0                    
+[FILESIZE] 4
+[LASTVIEW] "Clasify_Status_Control"
+[SERVER] LOCAL
+[UTF8]
+[VERSION] 1
+RECORD_LENGTH 74
+Status_Control                  ASCII       1  26   AS "Status Control"  
+Count                           ARBUTUS    27  12 0 WIDTH 8  
+COUNT_PERCENTAGE                ARBUTUS    39  12 2 AS "Percent;of Count" WIDTH 8  
+FIELD_PERCENTAGE                ARBUTUS    51  12 2 AS "Percent;of Field" WIDTH 8  
+Amount_Credit                   ARBUTUS    63  12 0  

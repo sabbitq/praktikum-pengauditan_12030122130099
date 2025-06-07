@@ -1,0 +1,11 @@
+[SKIP] 0
+[TLINES] 1
+[RLINES] 1
+[LINE] 1
+Posting_Date          
+Voucher_Number         WIDTH 15
+Voucher__Description   WIDTH 19
+Account_Number         WIDTH 15
+Amount_Debit          
+Amount_Credit          WIDTH 13
+Balance               

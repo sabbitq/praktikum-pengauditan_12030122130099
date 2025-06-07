@@ -1,0 +1,32 @@
+FILE_NAME Realsa FIL\Fixed Asset.FIL
+~Table Imported via OpenXML Excel 05/28/2025 15:08:42
+~.05/28/2025 15:09:02 _ IMPORT OPENEXCEL TO Fixed_Asset FILE "C:\Users\USer\Documents\Arbutus\M. Sabbit Qolbi\Realsa Data\Arbutus data Fixed Asset.xlsx" TABLE "Sheet2" SERVER "LOCAL" FLAT "C:\Users\USer\Documents\Arbutus\M. Sabbit Qolbi\Realsa FIL\Fixed Asset.FIL" FIELDS "No.","Nama dan spesifikasi","Jenis Aset","Unit","Tanggal Perolehan","Harga Perolehan","Tarif Penyusutan","Akumulasi 2020","Nilai Buku2020","Penyusutan 2021","Akumulasi 2021","Nilai Buku2021" END 
+[FILESIZE] 18
+[LASTVIEW] "Fixed_Asset"
+[FILTER] Penyusutan_2021 > Nilai_Buku2020 - 0.5
+[FILTER] Penyusutan_2021 = Harga_Perolehan * Tarif_Penyusutan
+[FILTER] Penyusutan_2021 = Nilai_Buku2020 * Tarif_Penyusutan
+[REFRESH] OPENEXCEL FILE "C:\Users\USer\Documents\Arbutus\M. Sabbit Qolbi\Realsa Data\Arbutus data Fixed Asset.xlsx" TABLE "Sheet2" SERVER "LOCAL" FLAT "C:\Users\USer\Documents\Arbutus\M. Sabbit Qolbi\Realsa FIL\Fixed Asset.FIL" FIELDS "No.","Nama dan spesifikasi","Jenis Aset","Unit","Tanggal Perolehan","Harga Perolehan","Tarif Penyusutan","Akumulasi 2020","Nilai Buku2020","Penyusutan 2021","Akumulasi 2021","Nilai Buku2021" END
+[SERVER] LOCAL
+[DELIMITED] 0 9 0
+[UTF8]
+[VERSION] 1
+RECORD_LENGTH 219
+No                              PRINT       1   2 0 DECIMAL '.' NATIVE [D]  
+Nama_dan_spesifikasi            UTF8        3  29   NATIVE [D]  
+Jenis_Aset                      UTF8       32  15   NATIVE [D]  
+Unit                            PRINT      47   1 0 DECIMAL '.' NATIVE [D]  
+Tanggal_Perolehan               PRINT      48   4 0 DECIMAL '.' NATIVE [D]  
+Harga_Perolehan                 PRINT      52   9 0 DECIMAL '.' NATIVE [D]  
+Tarif_Penyusutan                PRINT      61   5 3 WIDTH 6 DECIMAL '.' NATIVE [D]  
+Akumulasi_2020                  PRINT      66   8 0 DECIMAL '.' NATIVE [D]  
+Nilai_Buku2020                  PRINT      74   9 0 DECIMAL '.' NATIVE [D]  
+Penyusutan_2021                 PRINT      83   9 1 WIDTH 10 DECIMAL '.' NATIVE [D]  
+Akumulasi_2021                  PRINT      92   9 1 WIDTH 10 DECIMAL '.' NATIVE [D]  
+Nilai_Buku2021                  PRINT     101  10 1 WIDTH 11 DECIMAL '.' NATIVE [D]  
+Verifikasi_Penyusutan_2021      COMPUTED            AS "Verifikasi Penyusutan 2021"  
+ #C 4 13
+ "benar" IF Penyusutan_2021 = Harga_Perolehan * Tarif_Penyusutan
+ "habis Manfaat" IF Penyusutan_2021 = Nilai_Buku2020 - 1
+ "benar" IF Penyusutan_2021 > Nilai_Buku2020 - 0.5
+ "salah"

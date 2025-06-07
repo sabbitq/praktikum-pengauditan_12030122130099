@@ -1,0 +1,22 @@
+FILE_NAME Realsa FIL\Koreksi Penyusutan 2021
+~Table Imported via OpenXML Excel 05/28/2025 15:08:42
+~.05/28/2025 15:09:02 _ IMPORT OPENEXCEL TO Fixed_Asset FILE "C:\Users\USer\Documents\Arbutus\M. Sabbit Qolbi\Realsa Data\Arbutus data Fixed Asset.xlsx" TABLE "Sheet2" SERVER "LOCAL" FLAT "C:\Users\USer\Documents\Arbutus\M. Sabbit Qolbi\Realsa FIL\Fixed Asset.FIL" FIELDS "No.","Nama dan spesifikasi","Jenis Aset","Unit","Tanggal Perolehan","Harga Perolehan","Tarif Penyusutan","Akumulasi 2020","Nilai Buku2020","Penyusutan 2021","Akumulasi 2021","Nilai Buku2021" END
+~.05/28/2025 16:12:46 Fixed_Asset EXTRACT FIELDS Nama_dan_spesifikasi Harga_Perolehan Tarif_Penyusutan Penyusutan_2021 TO "C:\Users\USer\Documents\Arbutus\M. Sabbit Qolbi\Realsa FIL\Koreksi Penyusutan 2021" OPEN IF Verifikasi_Penyusutan_2021 = "salah"
+~Input : Records:18          Control Total:0                    
+~Output: Records:5           Control Total:0                    
+[FILESIZE] 5
+[LASTVIEW] "Koreksi_Penyusutan_2021"
+[SERVER] LOCAL
+[UTF8]
+[VERSION] 1
+RECORD_LENGTH 52
+Nama_dan_spesifikasi            UTF8        1  29    
+Harga_Perolehan                 PRINT      30   9 0 DECIMAL '.'  
+Tarif_Penyusutan                PRINT      39   5 3 WIDTH 6 DECIMAL '.'  
+Penyusutan_2021                 PRINT      44   9 1 WIDTH 10 DECIMAL '.'  
+penyusutan_benar                COMPUTED            AS "penyusutan benar"  
+ #N 1 3
+ Harga_Perolehan * Tarif_Penyusutan
+koreksi                         COMPUTED             
+ #N 1 3
+ penyusutan_benar - Penyusutan_2021
